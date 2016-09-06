@@ -1,4 +1,5 @@
 sel
+redix-x-cli
 .*.swp
 go-lib
 to/rpt-daily*.pdf
