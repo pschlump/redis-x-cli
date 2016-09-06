@@ -1,0 +1,10 @@
+set ftp_server 127.0.0.1
+set ftp_username pschlump
+set ftp_password uuqqrm
+set ftp_cwd x
+loop select * from "t_test_crud2" order by "id";
+echo "id={{.id}} name={{.name}}"
+set ftp_file_to_send {{.name}}
+send_ftp
+end-loop
+quit

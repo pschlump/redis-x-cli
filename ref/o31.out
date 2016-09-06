@@ -1,0 +1,4 @@
+Connected to SQLExpress2 via odbc (192.168.0.161:1433) server.
+Database set to "Test".
+_row_ | b1    | b2    | b3    | c1 | c2 | c3    | c4 | d1    | d2    | d3    | d4    | d5    | d6    | n1 | n2 | n3 | n4 | n5 | n6 | n7 | n8 | n9 | ui   
+    1 | false | <nil> | <nil> | a  | a  | a     | a  | <nil> | <nil> | <nil> | <nil> | <nil> | <nil> | 2  |  1 | 1  | 1  |  1 |  1 |  1 |  1 |  1 | <nil>

@@ -1,0 +1,165 @@
+Error(10001): Parsing return value failed. sql-cfg.json[%s].G
+Error(10002): Database Error. sql-cfg.json[%s].G
+Error(10003): Database Error. sql-cfg.json[%s].F
+Error(10004): Invalid API Key.
+Error(10005): Invalid Query Parameters (%s) sql-cfg.json[%s]
+rv = fmt.Sprintf("{ \"status\":\"error\",\"msg\":\"Error(10006): Query should have return rows but did not. sql-cfg.json[%s].Query[%s]\",%s }",cfgTag, h.Query tr.LFj() )
+Error(10007): Invalid number of rows returned. sql-cfg.json[%s].G
+Error(10008): Invalid internal configuration.  Both G and Query set to values in sql-cfg.json[%s].
+Error(10009): Parsing return value failed. sql-cfg.json[%s] Post Function Call(CacheEUser)
+Error(10010): Invalid internal configuration.  A called function %s has not been provided in the Go code. sql-cfg.json[%s].
+Error(10014): %v, %s
+Error(10012): %v, %s
+Error(10015): Parsing return value failed. sql-cfg.json[%s] Post Function Call(DeCacheEUser)
+Error(10020): Unable to get the hostname (%v)
+Error(10021): Unable to get the IP addresses for this host (%v)
+Error(10022): Trace is unable to get the server set, %v, %s
+Warning(10023): Missing data for %s, Empty string used! sql-cfg.json[%s]
+Log(10025): Specificed that %s should be set as a cookie but value not provided by %s.%s
+Error(10026): during Prepare, Run1Thx, %v
+Error(10027): during Exec, Run1Thx, %v
+Error(10028): Not a valid operation on this table.
+Error(10029): Invalid Query Parameters.
+Error(10030): Invalid API Key.
+Warning(10031): Missing data for %s, Empty string used!
+Error(10032): Unable to construct where clause. Error with JSON parse. Raw Data:%s Err:%v
+Error(10033): Invalid Type: %s for column %s
+Error(10034): Invalid Where Clause; %s
+Error(10035): Invalid Type: %s for column %s
+Error(10036): Invalid Type: %s for column %s
+Error(10038): Type Error: %v for column %s
+Error(10037): Type Error: %v for column %s
+Error(10039): Type Error: %v for column %s
+Error(10040): Invalid Op: %s
+Error(10041): Must have an 'and' or 'or' as the top level in the where clause
+Error(10043): Only 1 column can be specified as a primary key when using this API. %s at %s
+Error(10044): Type Error: %v for column %s
+Error(10045): Table musth have a primary key when using this API. None Specified. %s at %s
+Error(10046): Invalid table %s
+Error(10047): Invalid Time/Date column %s, %s
+Error(10048): Invalid True/Flase column %s, %s
+Error(10050): Invalid Number column %s, %s
+Error(10051): Invalid True/Flase column %s, %s
+Error(10052): Invalid Number column %s, %s
+Error(10053): Invalid Time/Date column %s, %s
+Error(10054): Update must set someting - nothing set. %s
+Error(10058): Invalid string data %s, %s
+Error(10057): Invalid integer data %s, %s
+Error(10056): Invalid boolean data %s, %s
+Error(10059): Invalid float data %s, %s
+Error(10055): Invalid Time/Date data %s, %s
+Error(10056): Insert must insert atleast 1 column %s
+Error(10060): Invalid string data %s, %s
+Error(10061): Invalid Number column %s, %s
+Error(10062): Invalid integer data %s, %s
+Error(10063): Invalid True/Flase column %s, %s
+Error(10064): Invalid boolean data %s, %s
+Error(10065): Invalid Number column %s, %s
+Error(10066): Invalid float data %s, %s
+Error(10067): Invalid Time/Date column %s, %s
+Error(10068): Invalid Time/Date data %s, %s
+Error(10069): Invalid string data %s, %s
+Error(10070): Insert must insert atleast 1 column %s
+Error(10080): Missing Parameter:
+Error(10081): Missing Parameter:
+Error(10082): Parameter Too Short:%s Minimum Length %d
+Error(10083): Parameter Too Long:%s Maximum Length %d
+Error(10084): Rgular expression in valiation invalid - error %s
+Error(10085): Parameter failed to match regular expression:%s
+Error(10086): Invalid integer - failed to parse at %s, %s, value=%s
+Error(10087): Parameter Too Short:%s Minimum %d
+Error(10088): Parameter Too Large:%s Maximum %d
+Error(10089): Invalid number - failed to parse at %s, %s, value=%s
+Error(10090): Parameter Too Small:%s Minimum %f
+Error(10091): Parameter Too Large:%s Maximum %f
+Error(10092): Invalid date/time - failed to parse at %s, %s, value=%s
+Error(10093): Parameter too far in the past:%s Minimum %v
+Error(10094): Parameter too far in the future:%s Maximum %v
+Error(10095): %v, %s
+Error(10096): unable to unmarshal the data from redis ->%s<- into a struct
+Error(10097): unable to unmarshal the data from redis ->%s<- into a struct
+Error(10098): unable (2) to unmarshal the data from redis ->%s<- into a struct
+Error(10099): %v, %s
+Error(10100): %v
+Error(10101): %v
+Error(10102): Invalid table %s
+Error(10103): File (%s) missing or unreadable error: %v
+Error(11000): %v, %s
+Error(11001): %v, %s
+Error(11002): %v, %s
+FAIL(11003): Status != 'success', %s
+FAIL(11004): missing data in response, auth_token or csrf_token, %s
+Error(11004): %v, %s
+FAIL(11004): Status != 'success', %s
+FAIL(11005): missing data in response, status or ip, %s
+Error(11006) error getting key, returning empty interface for:%s, err=%s
+// File: tr/trace.go
+// This error indicates that the redis-server has been restarted since the tab-server1 was started. 
+// Should reconnect or reload tab-server1.
+Error(11007) error incrementing key, returning empty interface for:%s, err=%s
+// File: tr/trace.go
+// This error indicates that the redis-server has been restarted since the tab-server1 was started. 
+// Should reconnect or reload tab-server1.
+Error(11008): %v, %s
+FAIL(11009): Status != 'success', %s
+fmt.Printf ( "Error(12002): Invalid format for Email config file - %v\n", err )
+Error(12004): parsing/reading template, %s
+Error(12005): running template, %s
+Error(12006): Reading in global config %v
+Error(12007): Reading in global config %v
+Error(12008): Invalid function to call (%s)
+Error(12009): Additional parameters needed
+Info(12010): Select returnd 0 rows
+Warning(12011): Select returnd %d rows, only the 1st one was used.
+Warning(12012): Format for %s contained 0 formatting elements.  This may be an error. format=%s
+Warning(12014): Unable to find a format [%s] for column %s, format=%s
+Error(12015): %v
+Error(12016): Error parsing width to pad to, %v
+Error(12017): Error parsing width to pad-left to, %v
+Error(12018): Error parsing width to center to, %v
+Warning(12020): Format for %s contained 0 formatting elements.  This may be an error. format=%s
+Warning(12019): Format for %s contained 0 formatting elements.  This may be an error. format=%s
+Error(12021): SMTP Send Error: %v
+Error(12022): Can not send an email without a body or attachments.
+Error(12025): Failed to parse time. %s
+Error(12024): Failed to parse float. %s
+Error(12023): Failed to parse time. %s
+Error(12026): invalid data type for PicFloat, got %T
+Error(12027): Query (%s) is invalid, insufficient bind parameters were passed.", qry ) )
+UnreacableCode(12028): Invalid state")
+Error(12029): Invalid format for FTP config file - %v
+Error(12030): The FTP connection failed Username=(%s).
+Error(12031): The ftp login failed Username=(%s).
+Error(12032): The Cwd(Change directory) command failed Username=(%s) cwd=(%s).
+Error(12036): File not found %s
+Error(12038): Missing file %s
+Error(12037): Invalid format - %v
+Error(12039): Invalid time, got ->%s<- expecting a format of %s\n
+Error(12040): Missing file %s\n
+Error(12043): Invalid Query Parameters (%s) sql-cfg.json[%s]
+Error(12046): Invalid Query Parameters (%s) sql-cfg.json[%s]
+Error(12048): Invalid Query Parameters (%s) sql-cfg.json[%s]
+Error(12049): failed to connnect to postgres, err=
+Warning(12050): Missing data for %s, Empty string used!
+Error(12061): convering data to JSON, %s
+Error(12062): on query %s, query=%s, data=%v
+Error(14022): Interal error - should never reach this code, %s
+Error(14012): Interal error - should never reach this code, %s
+Error(14013): invalid -c option ->%s<- did not parse.
+Error(14014): Failed to parse CLI (%s), %v
+Error(14014): Failed to parse CLI (%s)
+Debug(14015): cmdData.Cmd=%s
+Error(14016): Invalid command - empty - can ony be a command that is specified in configuration for running.\n
+Error(14016): command is invalid, empty.
+Error(14017): Invalid command - can ony be a command that is specified in configuration for running.\n
+Error(14017): command is invalid.
+Debug(14018): cmdData.Cmd=%s
+Error(14023): Unable to execute command.
+Debug(14019): Output: [%s]
+Error(14021): Unable to read output from running go-sql, file not found, fn->%s<-
+Error(14021): invalid output file, unable to parse it.
+Debug(14024): HTML: [%s]
+Error(14022): Unable to parse output from running go-sql, id not found
+Error(14022): invalid report output.  ID not found.
+		rv := fmt.Sprintf(`{"status":"error","msg":"Error(14025): Missing internal configuration for this function, cfgTag=func-valid:respHandlerGenReprot"}` )
+		rv := fmt.Sprintf(`{"status":"error","msg":"Error(14029): Invalid Query Parameters. CLI must be specified."}` )

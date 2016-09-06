@@ -1,0 +1,33 @@
+{
+	"Cols":[
+		{ "ColName": "name"
+			, "Width": 6
+			, "ColTitle": "Name"
+			, "Justify": "L"
+			, "ColTitleJustify": "L"
+		}
+		,{ "ColName": "value1"
+			, "Width": 19
+			, "ColTitle": "Value 1"
+			, "Justify": "R"
+			, "ColTitleJustify": "R"
+			, "Format":"Fmt \"-={%v}=-\" | PadRight 15"
+		}
+		,{ "ColName": "value2"
+			, "Width": 20
+			, "ColTitle": "Value 2"
+			, "Justify": "R"
+			, "ColTitleJustify": "R"
+			, "Format":"PicFmt \"###,###,##0.00000\""
+		}
+		,{ "ColName": "value3"
+			, "Width": 40
+			, "ColTitle": "Date"
+			, "Justify": "C"
+			, "ColTitleJustify": "C"
+			, "Format":"PicTime \"YYYY-MM-DD HH:mm\""
+		}
+	]
+	,"TitleLine":true
+	,"HeadersOn":true
+}

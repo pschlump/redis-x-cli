@@ -1,0 +1,154 @@
+{{define "report"}}
+
+<style>
+.col1, .hcol1, .tcol1 {
+	padding-top: 6px;
+	padding-bottom: 4px;
+}
+.col0, .col1, .col2, .col3, .col4, .col5, .tcol0, .tcol1, .tcol2, .tcol3, .tcol4, .tcol5 {
+	border-top: 1px solid #4aaed2;
+}
+.tcol1, .tcol3 {
+	font-size: 15px;
+	font-weight: 600;
+}
+.col1 a {
+	font-size: 14px;
+	font-weight: 600;
+}
+.belowMore {
+	padding-top: 25px;
+}
+.itemOptionsList {
+	padding-left: 20px;
+	padding-bottom: 10px;
+	font-size: 11px;
+}
+.itemOptionsList div {
+	padding-left: 10px;
+}
+.row {
+}
+.col-sm-1 {
+	width: 8.3333%;
+	float: left;
+}
+.col-sm-4 {
+	width: 33.3333%;
+	float: left;
+}
+.col-sm-10 {
+	width: 83.3333%;
+	float: left;
+}
+.numeric-input {
+	text-align: right;
+}
+</style>
+
+<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-10">
+		<h4> Invoice No: {{.invoice_no}} </h4>
+	</div>
+	<div class="col-sm-1"></div>
+</div>
+
+<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-4">
+		<h4> Shipping To </h4>
+		<table>
+			                                         <tr> <td> {{.s_first_name}} {{.s_last_name}} </td> </tr>
+			{{if ifIsNotNull . "s_business_name"}}   <tr> <td> {{.s_business_name}} </td> </tr> {{end}}
+			                                         <tr> <td> {{.s_line_1}} </td> </tr>
+			{{if ifIsNotNull . "s_line_2"}}          <tr> <td> {{.s_line_2}} </td> </tr> {{end}}
+			{{if ifIsNotNull . "s_line_3"}}          <tr> <td> {{.s_line_3}} </td> </tr> {{end}}
+			{{if ifIsNotNull . "s_suite_apt"}}       <tr> <td> {{.s_suite_apt}} </td> </tr> {{end}}
+			                                         <tr> <td> {{.s_city}} {{.s_state}}, {{.s_postal_code}} </td> </tr>
+		</table>
+	</div>
+	<div class="col-sm-1"></div>
+	<div class="col-sm-4">
+		<h4> Billing Address </h4>
+		<table>
+			                                         <tr> <td> {{.b_first_name}} {{.b_last_name}} </td> </tr>
+			{{if ifIsNotNull . "b_business_name"}}   <tr> <td> {{.b_businesb_name}} </td> </tr> {{end}}
+			                                         <tr> <td> {{.b_line_1}} </td> </tr>
+			{{if ifIsNotNull . "b_line_2"}}          <tr> <td> {{.b_line_2}} </td> </tr> {{end}}
+			{{if ifIsNotNull . "b_line_3"}}          <tr> <td> {{.b_line_3}} </td> </tr> {{end}}
+			{{if ifIsNotNull . "b_suite_apt"}}       <tr> <td> {{.b_suite_apt}} </td> </tr> {{end}}
+			                                         <tr> <td> {{.b_city}} {{.b_state}}, {{.b_postal_code}} </td> </tr>
+		</table>
+	</div>
+	<div class="col-sm-1"></div>
+</div>
+
+<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-10">
+		<br>
+		<div style="width:100%;margin-left:auto;margin-right:auto;">
+
+			<table width="100%">
+				<tr>
+					<!-- <th class="hcol0">&nbsp;</th> -->
+					<th class="hcol1">Product</th>
+					<th class="hcol3 numeric-input">Qty</th>
+					<th class="hcol4 numeric-input">Unit Price</th>
+					<th class="hcol5 numeric-input">Total</th>
+				</tr>
+				{{range $index, $item := .invoiceDetail}}
+				<tr>
+					<td valign="top" class="col1">{{$item.prod_name}}<br>SKU: {{$item.SKU}}
+						{{if $item.hasOptions}}
+						<div class="itemOptionsList">
+							Selected Options: <br>
+							{{range $inner, $opt := $item.options}}
+							<div ng-repeat="opt in item.options">
+								{{$opt.group}} {{$opt.option_title}} {{$opt.ex_total}}<br>
+							</div>
+							{{end}}
+						<div>
+						{{end}}
+					</td>
+					<td valign="top" class="col3 numeric-input">{{$item.n_qty}}</td>
+					<td valign="top" class="col4 numeric-input">{{$item.total | printf "%8.2f" }}</td>
+					<td valign="top" class="col5 numeric-input">{{$item.ex_total | printf "%8.2f" }}</td>
+				</tr>
+				{{end}}
+				{{range $index, $invoice := .Invoice}}
+				<tr>
+					<!-- <td class="tcol0">&nbsp;<br>&nbsp;</td> -->
+					<td class="tcol1" colspan="2">&nbsp;</td>
+					<td class="tcol1">Subtotal</td>
+					<td class="tcol3 numeric-input">{{$invoice.total | printf "%8.2f" }}</td>
+				</tr>
+				<tr>
+					<!-- <td class="tcol0">&nbsp;<br>&nbsp;</td> -->
+					<td class="xcol1" colspan="2">&nbsp;</td>
+					<td class="tcol1">Tax</td>
+					<td class="tcol3 numeric-input">{{$invoice.tax_amt | printf "%8.2f" }}</td>
+				</tr>
+				<tr>
+					<!-- <td class="tcol0">&nbsp;<br>&nbsp;</td> -->
+					<td class="xcol1" colspan="2">&nbsp;</td>
+					<td class="tcol1">Shipping &amp; Handleing</td>
+					<td class="tcol3 numeric-input">{{$invoice.shipping_total | printf "%8.2f" }}</td>
+				</tr>
+				<tr>
+					<!-- <td class="tcol0">&nbsp;<br>&nbsp;</td> -->
+					<td class="xcol1" colspan="2">&nbsp;</td>
+					<td class="tcol1">Total</td>
+					<td class="tcol3 numeric-input">{{$invoice.the_total | printf "%8.2f" }}</td>
+				</tr>
+				{{end}}
+			</table>
+
+		</div>
+	
+	</div>
+	<div class="col-sm-1"></div>
+</div>
+
+{{end}}

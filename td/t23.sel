@@ -1,0 +1,16 @@
+
+# Test -23-
+# Sun May 18 19:22:52 MDT 2014
+# 
+# test generaing a reprot using template.
+# test command substitution with _seq_
+
+save . select * from "train_hdr";
+save Cars select * from "train_cars";
+print data
+set _seq_ 1
+rt td/t23.tmpl to/t23_{{._seq_}}.rpt
+echo Sending the file via FTP
+set ftp_file_to_send to/t23_{{._seq_}}.rpt
+send_ftp
+quit

@@ -1,0 +1,15 @@
+# Test -11-
+# Sun May 18 19:22:52 MDT 2014
+# 
+# text settting up data and stuff from multip queris using "save"
+# test printing the data
+# test generaing a reprot using template.
+# test command substitution with _seq_
+
+save . select * from "t_test_crud2";
+save . select * from "train_hdr";
+save Cars select * from "train_cars";
+print data
+set _seq_ 1
+rt td/t11.tmpl to/t11_{{._seq_}}.rpt
+quit

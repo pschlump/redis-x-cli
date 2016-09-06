@@ -1,0 +1,1 @@
+./go-sql -i rpt-daily-screen.rpt -c '{"auth_token":"58375b0e-0feb-410a-81e3-3e79a1c1a740","dest":"Screen","site":"","from":"2014-04-06 05:00:00","thru":"2014-08-19 05:00:00"}' "" "" " Limit 500 " FromDate ToDate MineName

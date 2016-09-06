@@ -1,0 +1,60 @@
+
+--
+-- Test -27-
+-- Report generator for Saftey Observation to HTML
+-- Thu Jun 26 14:19:51 MDT 2014
+--
+
+set _host_ http://192.168.0.151:8099/
+
+save . select * from "t_test_crud2" limit 1;
+save Obs  select card."id"
+  , card."dateEntered"
+  , card."enteredBy"
+  , card."dateModified"
+  , card."modifiedBy"
+  , card."observationTypeId"
+  , observationType."name" as "observationType_name"
+  , observationType."description" as "observationType_description"
+  , card."dateObserved"
+  , site."name" as "site_name"
+  , site."division" as "site_division"
+  , site."description" as "site_description"
+  , card."departmentId"
+  , card."crewId"
+  , crew."name" as "crew_name"
+  , crew."description" as "crew_description"
+  , card."categoryId"
+  , category."code" as "category_code"
+  , category."name" as "category_name"
+  , category."description" as "category_description"
+  , card."description"
+  , card."result"
+  , card."resultDate"
+  , card."isReviewable"
+  , card."isComplete"
+  , card."submittedBy"
+FROM "tblCard" as card
+LEFT JOIN "tblSite" as site on card."siteId" = site."id"
+LEFT JOIN "tblCategory" as category on card."categoryId" = category."id"
+LEFT JOIN "tblObservationType" as observationType on card."observationTypeId" = observationType."id"
+LEFT JOIN "tblDepartment" as department on card."departmentId" = department."id"
+LEFT JOIN "tblCrew" as crew on card."crewId" = crew."id"
+{{.__1__}} {{.__2__}}
+ORDER BY card."dateEntered"
+{{.__3__}}
+;
+
+-- print data
+
+loop Obs ;
+save Plans select "tblActionPlan"."id" ,"tblActionPlan"."cardId" ,"tblActionPlan"."sequence" ,"tblActionPlan"."actionPlan" ,"tblActionPlan"."dateEntered" ,"tblActionPlan"."targetCompletion" ,"tblActionPlan"."notes" ,"tblActionPlan"."responsiblePersonId" ,"tblActionPlan"."isDeleted" ,"tblPerson"."firstName" ,"tblPerson"."lastName" ,"tblPerson"."email" ,"tblPerson"."phone" ,"tblActionPlan"."actionCompleted" FROM "tblActionPlan" as "tblActionPlan" left join "tblPerson" as "tblPerson" on "tblActionPlan"."responsiblePersonId" = "tblPerson"."id" where "tblActionPlan"."cardId" = '{{.id}}' ;
+end-loop
+
+-- print data
+
+rt td/t27.tmpl to/t27.html
+topdf to/t27.html to/t27.pdf
+
+quit
+

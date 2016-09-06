@@ -1,0 +1,11 @@
+# Test -08-
+# Sun May 18 13:18:54 MDT 2014
+# 
+# text csv output format.
+
+select * from "t_test_crud2";
+set fmt csv
+select * from "t_test_crud2";
+set fmt TEXT
+select * from "t_test_crud2";
+quit

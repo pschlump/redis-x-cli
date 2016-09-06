@@ -1,0 +1,10 @@
+loop select * from bob;
+abc.def 1
+loop select 2 from bob2;
+abc.def 2.1
+abc.def 2.2
+end-loop
+abc.def 3
+end-loop
+quit
+

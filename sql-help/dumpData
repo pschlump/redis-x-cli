@@ -1,0 +1,474 @@
+
+## set Name Value
+
+    This command sets a value in the common data store.  This data 
+    is used in substituting macros for all commands.
+
+    The special "Name"s that will have additional side effects are:
+
+        __path__            The search path for files.  Directories are
+                            ';' seperated.
+
+         debug              Turn on/off debuging in go-sql.
+         __debug__          Example: set debug on
+
+         echo               Turon on/off echo during running of scripts.
+         __echo__
+
+         __input_file__     Automatically set to the current input file.
+
+         __line_no__        Automatically set to the line number in the 
+                            current input file.
+
+         fmt                The current output format for table data.
+         __fmt__            Legitimate formats are:
+                                "json" , "JSON" , "xml" , "XML" , "insert",
+                                "csv", "CSV", "text", "TEXT", "txt-fmt"
+                            See below for details on different formats.
+
+         table              The table name to use when generating "insert"
+         __table__          statements as output from a select.  This applies
+                            when "set fmt insert" has been set.  Default is
+                            "tableName".
+
+         __prompt__         Prompt to repalce "SQL> " for command input.
+         __prompt2__        Prompt to repalce "+++> " for multi line input.
+
+###	Example
+
+	SQL> set fmt xml
+	SQL> set aname Ted
+	SQL> set table_name bigtable
+
+## get Name
+
+
+    Print out the value that is associated with Name.  If a value is
+    a complex type then it is converted to JSON before printing.
+
+###	Example
+
+	SQL> get fmt
+	SQL> get aname
+	SQL> select from {{.table_name}} ;
+
+
+## print
+
+    Print out all the data in the common data store.
+
+	SQL> print data
+
+	Prints all the common global data in JSON format.
+
+	SQL> set ex1 Bob
+	SQL> print ex1
+
+	Prints out the common global data for the item "ex1"
+
+
+## Formats for Output
+
+    "json" , "JSON"         Output data in JSON format
+
+    "xml" , "XML"           Output data in XML format
+                            xml is without xml heder.
+                            XML is as an XML file.
+
+    "insert"                Output data as a set of insert statmetns.
+                            This is really useful for putting data
+                            into "git" or moving it to a production
+                            server.
+
+    "csv", "CSV"            Comma Seperated Value Format.
+                            CSV is with a header comment at the top.
+
+    "text", "TEXT"          Output as a text table - preformated.
+                            TEXT is with column headers.
+
+    "txt-fmt"               Use "colspec" format current set to
+                            do the output.
+
+
+
+### Example
+
+	SQL> set fmt insert
+	SQL> set table_name bob
+	SQL> select * from bob ;
+	insert into bob ( "i" ) values ( '1' );
+	insert into bob ( "i" ) values ( '11231232131231231' );
+	SQL> set target-db ms-sql
+	insert into [bob] ( [i] ) values ( '1' );
+	insert into [bob] ( [i] ) values ( '11231232131231231' );
+	go
+	SQL>
+
+
+## desc
+
+	SQL> desc
+
+	Lists the tables that are available to the currenly logged in user.
+
+	SQL> desc TABLE_NAME
+
+	Lists the columns for the specified table.
+
+	SQL> desc "Name"
+
+	Lists the columns for the table with an upper-lower case name that matches.
+
+## use
+
+	SQL> use <DatabaseName> 
+
+	is only applicable to ms-sql databases.  It sets the current database to
+	the specified one or prints out an error.
+
+
+## print
+
+	SQL> print data
+
+	This prints out all the data in the common store in indented JSON format.
+	
+
+	SQL> print name
+
+	This prints out the specified item "name".
+
+
+## echo
+
+	SQL> echo text text ...
+
+	Print out the text to the output.
+
+## save
+	
+	SQL> save MyData select * from table ;
+
+	This takes the results from the select statnemtn and creates it as an array
+	"MyData" in the common global store.   Use this to collect the data for
+	generating a report.
+
+	You can iterate over arrays in the common store using the looping constructs.
+	This allows you to build up a set of data for a report.
+
+	Reprots are generated via "colspec", "rt" or "runTemplate", "topdf", "r-pdf".
+
+	You can send reports via fpt using "send_ftp", via email using "send_email"
+	and to other machines on your network via samba (SMB) via "send_cp".  On
+
+	Data in the common store can be substitued into other select commands.
+
+		SQL> select '{{.somename}}'  ;
+
+	sbustitues in "somename" in the select.
+
+## send_email
+
+	This sends reprots or other text via email.  The configuration for 
+	connecting to the email server is in your xyzzy.cfg file.
+
+	This will use the following values from yor common global store to
+	send email:
+
+	xyzzy - table in .md file
+
+		<table>
+			<tr> <th> Name </th> 					<th> Description </th> </tr>
+			<tr> <td> email_to </td> 				<td> Address to send to. </td> </tr>
+			<tr> <td> email_from </td> 				<td> Address that this email is from. </td> </tr>
+			<tr> <td> email_to_name </td> 			<td> Name of the person you are sending to </td> </tr>
+			<tr> <td> email_from_name </td> 		<td> Name of the perons this email is from </td> </tr>
+			<tr> <td> email_report_subject </td> 	<td> Subject line </td> </tr>
+			<tr> <td> email_text_body </td> 		<td> Text body for email </td> </tr>
+			<tr> <td> email_html_body </td> 		<td> Html body for email </td> </tr>
+			<tr> <td> email_atach_report </td> 		<td> File to attach (.pdf) with report </td> </tr>
+		</table>
+
+## send_ftp
+
+	This sends a file via FTP using to a destination.  The file name is specifed in the common
+	global as "ftp_file_to_send".
+
+	xyzzy - need to use data from d.b. to determine who/where to send to.
+
+## send_cp
+
+	SQL> send_cp FileFrom FileTo
+
+	This can be used with SMB (samba) to sends fiel across the network or to jsut copy fiels
+	to a known directory.
+
+	SQL> send_cp {{.report_file_name}} /reports/saved_report_directory/{{.report_file_name}}
+
+## version
+
+	SQL> version
+
+	Prints out the current version number of go-sql.
+
+## help
+
+	SQL> help
+
+	Provides an overview of go-sql.
+
+	SQL> help cmd
+
+	Provides documentation on each of the commands in go-sql.
+
+
+## file
+
+	SQL> file to/o22.rpt
+	SQL> select * from "t_test_crud2";
+	SQL> end-file
+	SQL> quit
+
+	Take the output from the select and send it to the file "to/o22.rpt".
+
+## end-file
+
+	See "file".
+
+## \\o
+
+	Synonym for "file" command.
+
+	SQL> \\o file
+	SQL> select * from "t_test_crud2";
+	SQL> \\o
+
+
+## spool
+
+	SQL> spool file
+	SQL> select * from "t_test_crud2";
+	SQL> spool off
+
+	Send output to file.   This is similar to "file".
+
+## colspec
+
+	Synonym for "set-txt-format"
+
+	Read in a column table format specification from a file.	
+
+### Example
+
+		{
+			"Cols":[
+				{ "ColName": "name"
+					, "Width": 6
+					, "ColTitle": "Name"
+					, "Justify": "L"
+					, "ColTitleJustify": "L"
+				}
+				,{ "ColName": "value1"
+					, "Width": 19
+					, "ColTitle": "Value 1"
+					, "Justify": "R"
+					, "ColTitleJustify": "R"
+					, "Format":"Fmt \"-={%v}=-\" | PadRight 15"
+				}
+				,{ "ColName": "value2"
+					, "Width": 20
+					, "ColTitle": "Value 2"
+					, "Justify": "R"
+					, "ColTitleJustify": "R"
+					, "Format":"PicFmt \"###,###,##0.00000\""
+				}
+				,{ "ColName": "value3"
+					, "Width": 40
+					, "ColTitle": "Date"
+					, "Justify": "C"
+					, "ColTitleJustify": "C"
+					, "Format":"PicTime \"YYYY-MM-DD HH:mm\""
+				}
+			]
+			,"TitleLine":true
+			,"HeadersOn":true
+		}
+
+	TitleLine turns on a title for the report.
+
+	HedersOn turns on column headers.
+
+	Each column is specified as a template.
+
+	Widths are in characters.  Columns in the report can have a title, "ColTitle". 
+	The justificaiton for the column title is set with "ColTitleJustify".
+
+	Justification of the data is "L" for left, "R" for right, and "C" center.  This is 
+	set with "Justify".
+
+	Columns can be formateed.  "Fmt" is a go fmt.Printf format.  This can be
+	piped to other format tools like "PadRight 15" to pad into a 15 character field.
+
+	Floats have a "PicFmt" that uses a picture format."  "0" in the format is output
+	as a 0 or the numeric value.  This is usually used following the decimal point.
+	'#' is a digit in the number or a blank.  Other characters are passed through.
+	Speical handeling for "," is provided so that extra leading commans will not
+	be generated.  
+
+	Time/dates also have a picture format, "PicTime".  The format uses 
+
+		Format		Description
+		---------	-------------------------------------------
+		YY			2 digit year, like 14 for 2014
+		YYYY		4 digit year	
+		MM			Month - 2 digits
+		DD			Day - 2 digits
+		hh			2 digit horus, 1...12.
+		hh24		2 digit hour, 0...23.
+		mm			Minute
+		ss			Second
+
+		Mon
+		Day
+	
+	The formatting primitives are:
+	
+		"Pad":      ms.PadOnRight,
+		"PadLeft":  ms.PadOnLeft,
+		"PadRight": ms.PadOnRight,
+		"Center":   ms.CenterStr,
+		"Fmt":     ms.FmtPrintfStr,
+		"PicFmt":  ms.PicFloat,
+		"PicTime": ms.PicTime,
+		"PicDate": ms.PicTime,
+		"Nvl": 		ms.Nvl,
+		"FTime": 		kms.StrFTime,
+
+
+### Quit Commands
+
+	Any of the following can be used to exit go-sql.
+	"quit", "\\q", "exit", "bye", ":wq", "logout", "quit;", "exit;", "bye;", "logout;"
+
+### Comments
+
+	Comments in the files start with "--" or "//" and continue to the end of line.
+
+### Executing other files 
+
+	You can execute a .sel file by just placing the name.  There is no need for
+	some weird sort of '@' or '\i' prefix.   The current search path is used 
+	to find the file.  Currently the default search path is "." for the current
+	directory and ".." for the parent directory.
+
+	You can set the search path with "go-sql-search-path" in the global config.
+
+	You can set the search path with
+
+		SQL> set __path__ "abc;def"
+
+	where abc and def are paths to search.
+
+		SQL> set __path__ ""
+
+	is the same as setting it to the current directory.
+
+
+
+### topdf
+
+	Convert from HTML file to PDF for a report.
+
+	SQL> topdf file.html file.pdf
+
+### set-pdf-format
+
+	Configure the directly gnerated pdf file format.
+
+	Example:
+
+		{
+			"Paper": "A4",
+			"PaperWidth": 210,
+			"FontDir": "./gofpdf/font",
+			"HdrFontSize": 14,
+			"HdrFillColor": { "r":145, "g":178, "b": 245 },
+			"HdrTextColor": { "r":0, "g":0, "b":0 },
+			"BorderColor": { "r":12, "g":12, "b":12 },
+			"BorderWidth": 0.2,
+			"BodyFontSize": 12,
+			"BodyFillColor": { "r":222, "g":234, "b":255 },
+			"BodyTextColor": { "r":0, "g":0, "b":0 },
+			"ZebraStripe": 1,
+			"HasTitle": true,
+			"TitleStr": "Countries Report",
+			"PageNo": true,
+			"PadWidth": 5,
+			"ColsData": [
+				{
+					"ColName": "area",
+					"Width": 0,
+					"B_Width": false,
+					"Format": "",
+					"Justify": "R",
+					"ColTitle": "Area (sq km)",
+					"ColTitleJustify": "C"
+				},
+				{
+					"ColName": "name",
+					"Width": 0,
+					"B_Width": false,
+					"Format": "",
+					"Justify": "C",
+					"ColTitle": "Name",
+					"ColTitleJustify": "L"
+				},
+				{
+					"ColName": "capital",
+					"Width": 0,
+					"B_Width": false,
+					"Format": "",
+					"Justify": "R",
+					"ColTitle": "Capital",
+					"ColTitleJustify": "R"
+				},
+				{
+					"ColName": "pop",
+					"Width": 0,
+					"B_Width": false,
+					"Format": "PicFmt \"###,###,##0.00000\"",
+					"Justify": "C",
+					"ColTitle": "Pop. (thousands)",
+					"ColTitleJustify": "C"
+				}
+			]
+		}
+
+	This specifies the format and columns that will be generated on the output report.
+
+
+### runTemplate
+
+	Take the set of data saved in the common global and convert it using a template
+	to a text or html report.  This can then be converted to .pdf using "topdf"
+	command.
+
+	See td/t11.sel as an example.
+
+	"rt" is a abreviation for "runTemplate"
+
+	See td/t27.sel for an example that generates a pdf.
+
+
+
+
+
+
+"r-pdf":          DoPdf,				// simple PDF - table directly generated
+
+
+
+
+"loop":           DoLoop,
+"end-loop":       DoEndLoop,
+

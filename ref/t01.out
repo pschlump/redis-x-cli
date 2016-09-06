@@ -1,0 +1,330 @@
+Connected to postgres(192.168.0.151:5433) server.
+{
+	"__0__": "./go-sql",
+	"__debug__": "off",
+	"__echo__": "off",
+	"__input_file__": "td/t01.sel",
+	"__line_no__": "8",
+	"__path__": ".",
+	"dat1": [
+		{
+			"area": "8075",
+			"capital": "Vienna",
+			"name": "Austria",
+			"pop": "83859"
+		},
+		{
+			"area": "10192",
+			"capital": "Brussels",
+			"name": "Belgium",
+			"pop": "30518"
+		},
+		{
+			"area": "5295",
+			"capital": "Copenhagen",
+			"name": "Denmark",
+			"pop": "43094"
+		},
+		{
+			"area": "5147",
+			"capital": "Helsinki",
+			"name": "Finland",
+			"pop": "304529"
+		},
+		{
+			"area": "58728",
+			"capital": "Paris",
+			"name": "France",
+			"pop": "543965"
+		},
+		{
+			"area": "82057",
+			"capital": "Berlin",
+			"name": "Germany",
+			"pop": "357022"
+		},
+		{
+			"area": "10511",
+			"capital": "Athens",
+			"name": "Greece",
+			"pop": "131625"
+		},
+		{
+			"area": "3694",
+			"capital": "Dublin",
+			"name": "Ireland",
+			"pop": "70723"
+		},
+		{
+			"area": "57563",
+			"capital": "Roma",
+			"name": "Italy",
+			"pop": "301316"
+		},
+		{
+			"area": "424",
+			"capital": "Luxembourg",
+			"name": "Luxembourg",
+			"pop": "2586"
+		},
+		{
+			"area": "15654",
+			"capital": "Amsterdam",
+			"name": "Netherlands",
+			"pop": "41526"
+		},
+		{
+			"area": "9957",
+			"capital": "Lisbon",
+			"name": "Portugal",
+			"pop": "91906"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "58862",
+			"capital": "London",
+			"name": "United Kingdom",
+			"pop": "243820"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		},
+		{
+			"area": "39348",
+			"capital": "Madrid",
+			"name": "Spain",
+			"pop": "504790"
+		},
+		{
+			"area": "8839",
+			"capital": "Stockholm",
+			"name": "Sweden",
+			"pop": "410934"
+		}
+	]
+}
+Successfully generated tr/t01.pdf

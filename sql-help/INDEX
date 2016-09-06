@@ -1,0 +1,86 @@
+
+## Commands
+
+    quit, bye, :wq, \q                  Exit
+
+    select ...                          SQL Commands - must be lower case
+    insert ...                          Must stat with one of these words
+    update ...                          Must end with a ';' - Can be on multiple lines.
+    delete ...
+    create ...
+    drop ...
+    alter ...
+
+    set Name Value                      Set a vairable in the data store to the value.
+                                        There are a bunch of special variables.
+                                        For detailed help on them, "help set".
+                                        The variables are:
+                                            __path__, __debug__, __echo__,
+                                            __input_file__, __line_no__,
+                                            __fmt__, __table__,
+                                            __prompt__, __prompt2__,
+                                            fmt, table, debug, echo
+
+    print data                          Print out the entire common data store.
+
+	print __name__						Print out the specified item from the common data store.
+										For example, print __run_no__
+
+    help                                Help about this program.  Auther etc.
+
+    get
+
+    colspec file-name.fmt               Readin a column specificaiton file for PDF
+                                        or text reports.
+
+    save                                Save a set of data int he common store.
+                                            save . select * from example;
+                                        Saves 1 row in the common store.  If each
+                                        subsequent "save ." will merge data with
+                                        existing data in the store.
+                                            save Name select * from rows_example;
+                                        will save a set of rows in the common store
+                                        under the name, "Name".
+
+    runTemplate rpt-file                Run a templated report using the common store.
+    rt
+
+    send_email                          Send an email
+
+    send_ftp                            Push out content via ftp
+
+    send_cp                             Push out content by copying a file on the
+                                        local system.  This could send content via
+                                        other tools like Dropbox.
+
+    set-txt-format                      xyzzy
+
+    set-pdf-format                      xyzzy
+
+    r-pdf                               xyzzy
+
+    echo a b c                          Echo the string "a", "b", "c"
+
+    version                             Print out the version of this program.
+
+    file                                xyzzy
+
+    spool                               Sen the output of subsequent comands to
+    \o                                  a file.
+
+                                        xyzzy - how to turn spool off?
+
+    loop                                run a loop over a select.
+    end-loop
+
+## Examples
+
+    SQL> set fmt input
+    SQL> set table newTable
+    SQL> select * from my_table;
+    insert into newTable ( a, b ) values ( 'a', 'b' );
+        ...
+
+
+
+        

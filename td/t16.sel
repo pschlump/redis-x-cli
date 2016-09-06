@@ -1,0 +1,23 @@
+create table "t16" (
+	"n"		bigint
+);
+insert into "t16" ( "n" ) values
+	( 1 )
+,	( 2 )
+;
+select *
+from "t16"
+;
+update "t16"
+	set "n" = n + 1
+	where "n" > 1
+;
+select *
+from "t16"
+;
+delete from "t16" where "n" = 1;
+select *
+from "t16"
+;
+drop table "t16";
+quit

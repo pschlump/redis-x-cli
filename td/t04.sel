@@ -1,0 +1,11 @@
+# Test -04-
+# Sun May 18 13:14:04 MDT 2014
+# 
+# text "insert" output format.
+
+select * from "t_test_crud2";
+set fmt insert
+select * from "t_test_crud2";
+set table newTable
+select * from "t_test_crud2";
+quit

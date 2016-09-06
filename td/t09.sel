@@ -1,0 +1,9 @@
+# Test -09-
+# Sun May 18 13:08:25 MDT 2014
+# 
+# text json output format.
+
+select * from "t_test_crud2";
+set fmt json
+select * from "t_test_crud2";
+quit

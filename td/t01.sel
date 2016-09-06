@@ -1,0 +1,12 @@
+# Test -01-
+# Sun May 18 10:12:10 MDT 2014
+# 
+# Generate a report in PDF format in the file tr/t01.pdf
+#
+
+set-pdf-format td/t01.fmt
+save dat1 select * from "t01";
+print data
+r-pdf dat1 tr/t01.pdf
+quit
+

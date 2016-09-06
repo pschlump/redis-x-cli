@@ -1,0 +1,13 @@
+{
+	"Cmds": [
+		  { "Record": [ "drive", "select", " * from \"t_drive\" " ]
+		  , "Cmds": [
+				 { "Record": [ "save", ".", "select", "* from \"train_hdr\"" ] }
+				,{ "Record": [ "save", "Cars", "select", "* from \"train_cars\"" ] }
+				,{ "Record": [ "rt", "rod/t5.tmpl", "rout/%{_seq_%}.txt" ] }
+				,{ "Record": [ "set", "email_attach_report", "rout/%{_seq_%}.txt" ] }
+				,{ "Record": [ "send_email" ] }
+			]
+		  }
+	]
+}

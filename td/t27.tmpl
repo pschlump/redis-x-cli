@@ -1,0 +1,114 @@
+{{define "report"}}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+<style>
+
+.container{
+    display:table;
+    width:90%;
+    border-collapse: collapse;
+    }
+.heading{
+     font-weight: bold;
+     display:table-row;
+     background-color:#C91622;
+     text-align: center;
+     line-height: 25px;
+     font-size: 14px;
+     font-family:georgia;
+     color:#fff;
+}
+.table-row{  
+     display:table-row;
+     text-align: center;
+	font-family:Helvetica, Arial, sans-serif;
+}
+.col{
+	display:table-cell;
+	border: 1px solid #CCC;
+	font-family:Helvetica, Arial, sans-serif;
+}
+.hdr{
+     font-weight: bold;
+     text-align: center;
+     line-height: 25px;
+     font-size: 14px;
+     font-family:georgia;
+}
+
+</style>
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="font-family:Verdana,Helvetica,Arial,sans-serif">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" bgcolor="#ccffcc">
+    <tr>
+        <td align="center" valign="top">
+            <table border="0" cellpadding="20" cellspacing="0" width="800" id="emailContainer">
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0" cellpadding="20" cellspacing="0" width="100%" id="emailHeader" bgcolor="#ffffff">
+                            <tr>
+								<!-- This is where header content goes. -->
+                                <td align="center" valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+
+<h3>{{.__6__}}<br>
+Daily Saftey Observation Activity Report
+</h3>
+<h5>Current Time: {{.__now__}}</h5>
+<h4>Reporting Cards Entered from {{.__4__}} to {{.__5__}}</h4>
+<a href="{{._host_}}/api/gen-report?&site={{.siteId}}&pFrom={{.__4__}}&pThru={{.__5__}}&fmt=pdf">Printable Version</a>
+<!--
+<a href='/api/gen-report?cli={"Cmd":["./bin/go-sql","-i","../../t27.sel","-o","www/to/t27.out", "", "", " limit 65 ", "FromDateX", "ToDateX", "Alberts Mine"]}&rfmt=url'>
+-->
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+<center>
+<div class="container">
+	<div class="table-row">
+		<div class="col hdr">Links</div>
+		<div class="col hdr">Date</div>
+		<div class="col hdr">Category</div>
+		<div class="col hdr">Description</div>
+		<div class="col hdr">Action Taken</div>
+		<div class="col hdr">Plans</div>
+	</div>
+	{{range .Obs}}
+	<div class="table-row">
+		<div class="col"><a href="{{g "_host_"}}card.html#/cards/{{.id}}" style="text-decoration:none;" target="_new">View Card</a></div>
+		<div class="col">{{.dateEntered}} | PicTime "YYYY-MM-DD HH:mm AM"</div>
+		<div class="col">{{.category_name}}</div>
+		<div class="col">{{.description}}</div>
+		<div class="col">{{.result}}</div>
+		<div class="col">
+			{{range .Plans}}
+			<div style="font-style:italic; font-size:x-small; ">
+				<p>
+					{{.actionPlan}}<br>
+					Assigned to: {{.firstName}} {{.lastName}}<br>
+					Due Date: {{.targetCompletion}} | PicDate "YYYY-MM-DD"<br>
+					<a href="{{g "_host_"}}card.html#/cards/{{.cardId}}/actionPlans/{{.id}}">Mark as Complete</a><br>
+				</p>
+			</div>
+			{{end}}
+		</div>
+	</div>
+	{{end}}
+</div>
+</center>
+
+
+</body>
+</html>
+{{end}}

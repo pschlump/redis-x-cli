@@ -1,0 +1,25 @@
+#
+#	_ = email.To(ExecuteATemplate("{{.email_to}}",g_data), ExecuteATemplate("{{.email_to_name}}",g_data)).
+#		From(ExecuteATemplate("{{.email_from}}",g_data),ExecuteATemplate("{{.email_from_name}}",g_data)).
+#		Subject(ExecuteATemplate("{{.email_report_subject}}",g_data)).
+#		TextBody(ExecuteATemplate("{{.email_text_body}}",g_data)).
+#		HtmlBody(ExecuteATemplate("{{.email_html_body}}",g_data)).
+#		Attach ( ExecuteATemplate(ExecuteATemplate("{{.email_attach_report}}", g_data ), g_data)).
+#		SendIt()
+
+file to/o24.rpt
+select * from "t_test_crud";
+end-file
+
+set email_to 				"pschlump@gmail.com"
+set email_to_name 			"Philip Schlump"
+set email_from 				"pschlump@gmail.com"
+set email_from_name 		"Philip J. Schlump"
+set email_report_subject 	"test 24"
+set email_text_body			"This is test 24."
+set email_html_body			"this <b>is</b> test 24."
+set email_attach_report		to/o24.rpt
+
+send_email
+
+quit

@@ -1,0 +1,24 @@
+{{define "report"}}
+{{ Concat .TrainIdOut "/" .ManifestId " -- " .CompanyName " -- " .NowFmt | Center 80 }}
+
+    {{XCol "L" 40 "--- Customer" "L" 35 "--- All Freight Charges"}}
+    {{XCol "L" 40 .CustomerName "L" 35 .FreightPayer }}
+    {{XCol "L" 40 .CustomerAddress "L" 35 .FreightAddress }}
+    {{XCol "L" 40 .CustomerCityStateZip "L" 35 .FreightCityStateZip }}
+ 
+    {{XCol "L" 40 "--- Consignee"         "L" 35 "--- From" }}
+    {{XCol "L" 40 .PowerPlantName         "L" 35 .MineName }}
+    {{XCol "L" 40 .PowerPlantAddress      "L" 8 "Attn  : " "L" 27 .MineContactName }}
+    {{XCol "L" 40 .PowerPlantCityStateZip "L" 8 "Phone : " "L" 27 .MineContactPhone }}
+    {{XCol "L" 40 .Manifest               "L" 18 "Sales Order(s) : " "L" 18 .SalesOrderList }}
+
+I skipped some stuff
+
+    {{XCol "L" 5 "Seq"   "C" 10 "Car ID" "R" 10 "Gross" "R" 10 "Tare" "R" 10 "Net" }}
+	{{range .Cars}}
+  {{.Sequence | printf "%4d" }}  {{.CarId | PadL 10}} {{.Gross | PicFloat "###,##0.00" }} {{.Tare | PicFloat "###,##0.00" }} {{.Net | PicFloat "###,##0.00" }}
+	{{end}}
+
+I skipped some more stuff
+
+{{end}}

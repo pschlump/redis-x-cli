@@ -1,0 +1,10 @@
+# Test -22-
+# Sun May 18 18:23:34 MDT 2014
+# 
+# text sending data to file (spool) output.
+
+file to/o22.rpt
+select * from "t_test_crud2";
+end-file
+quit
+

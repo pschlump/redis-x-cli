@@ -1,0 +1,16 @@
+ 1103  git add note.1
+ 1104  git commit -m Update note.1
+ 1106  git push origin master
+ 1108  cd example
+ 1111  vi echo.go
+ 1112  go run echo.go
+ 1114  cd ..
+ 1117  ls /opt/local/lib
+ 1120  cd
+ 1121  . ./.zshrc
+ 1122  cd -
+ 1123  go get github.com/shavac/readline
+ 1124  vi readline.go
+ 1125  sudo port install readline
+ 1126  ls /opt/local/lib/*read*
+ 1127  ls

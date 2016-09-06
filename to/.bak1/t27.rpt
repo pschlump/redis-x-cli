@@ -1,0 +1,723 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="font-family:Verdana,Helvetica,Arial,sans-serif">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" bgcolor="#ccffcc">
+    <tr>
+        <td align="center" valign="top">
+            <table border="0" cellpadding="20" cellspacing="0" width="800" id="emailContainer">
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0" cellpadding="20" cellspacing="0" width="100%" id="emailHeader" bgcolor="#ffffff">
+                            <tr>
+								<!-- This is where header content goes. -->
+                                <td align="center" valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+
+<h3>{{.__6__}}<br>
+Daily RunningRight Card Activity Report
+</h3>
+<h5>Current Time: 2014-06-30T09:50:29.55153-06:00</h5>
+<h4>Reporting Cards Entered from {{.__4__}} to {{.__5__}}</h4>
+<a href="http://www.Report-Server.com?app=SafteyObs&site=xyzzy&pFrom={{.__4__}}&pThru={{.__5__}}&fmt=pdf">Printable Version</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0" cellpadding="20" cellspacing="0" width="100%" id="emailBody" bgcolor="#ffffff">
+                            <tr>
+								<!-- This is where body content goes. -->
+                                <td align="center" valign="top">
+
+<table border="1">
+	<tr>
+		<th width="10%" style="font-family:Helvetica, Arial, sans-serif; ">Links</th>
+		<th width="10%" style="font-family:Helvetica, Arial, sans-serif; ">Date</th>
+		<th width="20%" style="font-family:Helvetica, Arial, sans-serif; ">Category</th>
+		<th width="20%" style="font-family:Helvetica, Arial, sans-serif; ">Description</th>
+		<th width="20%" style="font-family:Helvetica, Arial, sans-serif; ">Action Taken</th>
+		<th width="20%" style="font-family:Helvetica, Arial, sans-serif; ">Plans</th>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2345" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-25T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Comment</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Testing new database</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2346" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-25T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">A-Crew step up for the pit had his seat belt and lights on, told him good job.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2347" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-25T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Observed 3 pieces of yellow parked at East lunch shack all had their implements down.  Good job.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2344" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-25T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safety Slogan</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">If in doubt stop and find out!</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+			<div style="font-style:italic; font-size:x-small; ">
+				<p>
+					bbbbbbbbbbbbbbbbbb<br>
+					Assigned to: <no value> <no value><br>
+					Due Date: 2014-06-18T06:00:00+0000 | PicDate "YYYY-MM-DD"<br>
+					<a href="<no value>card.html#/cards/2344/actionPlans/ca1f4f11-b6c6-48a8-a776-5bfa13abfd83">Mark as Complete</a><br>
+				</p>
+			</div>
+			
+			<div style="font-style:italic; font-size:x-small; ">
+				<p>
+					ooo<br>
+					Assigned to: <no value> <no value><br>
+					Due Date: 2014-06-13T00:00:00+0000 | PicDate "YYYY-MM-DD"<br>
+					<a href="<no value>card.html#/cards/2344/actionPlans/7a335ba7-b9a7-47a7-87a3-ac2428c039a4">Mark as Complete</a><br>
+				</p>
+			</div>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2390" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Shovel 11 project keeping a clean pad.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2389" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Tires on enclosed trailer chocked at shovel 11.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2391" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Wyoming Machinery crews having safety conversations and discussing steps of jobs together at the beginning of each shift and before starting new tasks. Told the lead man I like their practices and participate in conversations and tool box meetings.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+			<div style="font-style:italic; font-size:x-small; ">
+				<p>
+					Test Plan<br>
+					Assigned to: <no value> <no value><br>
+					Due Date: <no value> | PicDate "YYYY-MM-DD"<br>
+					<a href="<no value>card.html#/cards/2391/actionPlans/1193">Mark as Complete</a><br>
+				</p>
+			</div>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2375" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Big horses head is unsafe, there are tripping hazards. You have to climb over and around things and not much for a handrail. The ladder needs to be done different, it's too tall for a ladder to use the valve on the truck box.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2372" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">No "loaded holes" or safety windrow on top of 24 above shovel 10 east end.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2362" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Drill running with no lights.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2352" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">A vendor was pumping fuel into his tanker. He was on top of the tanker. He had no safety harness on.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2356" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Noticed parts of the pit were dusty.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2371" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Now AMS is building creek channel along the haul road. There is not an adequate berm. Berms not required before since it was not an elevated roadway until the channel was cut.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2365" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Backhoe left parked and shut off in gear and not chocked.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2380" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Extremely dusty on PMT run.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2386" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Oil from swinger was cleaned up so the welder could air arc without starting a fire. Leak was contained.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2379" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Shot for shovel 7 had chunks bigger than the bucket.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2385" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Crew vans at the end of night shifts are passing service trucks and other vehicles on the 6% and everywhere else on the haul road. What good are the no passing zones.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2374" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Is having the rigging hanging off a crane hook a suspended load? If it's hanging off the hook I would think it should be.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2361" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">West end 24th bench spider that was not in use had covers off.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2359" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Haul truck driver was driving reclissly. Cutting others off and not paying attention to what he was doing.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+			<div style="font-style:italic; font-size:x-small; ">
+				<p>
+					no<br>
+					Assigned to: Rod Brown<br>
+					Due Date: <no value> | PicDate "YYYY-MM-DD"<br>
+					<a href="<no value>card.html#/cards/2359/actionPlans/4035315f-702a-4d68-8bd9-14fb1a74a62c">Mark as Complete</a><br>
+				</p>
+			</div>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2370" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Contractors driving pickup without headlights on.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2707" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">During sh 3 pm, all trucks had chock blocks in use. Told employees good job.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2369" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Boxes in walkways of electrical.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2349" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">No safety berm on top of 21 bench above 7.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2366" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Cat boom truck not chocked.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2384" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Lights in and around the FM yard never work and nobody does anything to fix them.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2383" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Haul trucks need to slow down when maintenance techs are working on downed equipment.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2353" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At shovel 11 the stairs in the break trailer are slanted.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2368" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Little acetylene bottle not chained up in the rack.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2373" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">3 separate plant techs in 3 separate pickups driving around with no headlights or blinky lights.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2381" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Low berm on 1 north.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2355" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Shovel 11 has possible fall hazard.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+			<div style="font-style:italic; font-size:x-small; ">
+				<p>
+					oo<br>
+					Assigned to: <no value> <no value><br>
+					Due Date: 2014-06-11T06:00:00+0000 | PicDate "YYYY-MM-DD"<br>
+					<a href="<no value>card.html#/cards/2355/actionPlans/7a2bbb86-2c9d-4352-93f0-c6fa6d694d68">Mark as Complete</a><br>
+				</p>
+			</div>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2378" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Low berm on third bench.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2555" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safety Slogan</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">The golden rule is a safety tool</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2377" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Drill was sideways to the highwall on the face row.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2376" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Air hoses and hot start hoses laying around at the inpit.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2364" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Electrician speeding around the shop.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2581" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Needed bench prep on east end of 22 E, got with coordinator to get it taken care of.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2363" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Portable hot starts at the mobile fuel islands need electrician locks on 480v disconnects and chock blocks.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2418" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Comment</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">What can we do to improve, allowing us to obtain 0-50-5?</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2360" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">1st land bridge dump low sloughing berm do to water erosion.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2647" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Process Improvement</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">The metal rack in the shop needs to be cleaned.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2357" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Water truck passed the lowboy without calling on the right hand side then got in front of lowboy and sprayed water.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2358" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Oil leaking down shovel 11.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2354" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At shovel 11 repair oil was spilled around the current work area with tools laying about.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2382" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At plant 3 job I observed a portable stair the employees were using was not attached and stable.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2351" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Propane bottles haven't been tied off.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2350" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Some employees were talking about a situation in the pit on the radio. You could tell that there was some confusion.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2348" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">A filing cabinet drawer was left open in a hallway.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2367" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">At Risk</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Plasma cutter in bay 10 blocked disconnects.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2387" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Guys putting down wheel chocks when they parked. Good Job!</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2388" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Shovel 11 side frame blocked on rails very secured. Nice Job!</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2393" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Proper lockout tagout procedures being used on shovel 11.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="<no value>card.html#/cards/2392" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">2013-09-26T00:00:00+0000 | PicTime "YYYY-MM-DD HH:mm AM"</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Safe</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">Shovel 11 appears to be properly cribbed.</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; "><no value></td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			
+		</td>
+	</tr>
+	
+</table>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0" cellpadding="20" cellspacing="0" width="100%" id="emailFooter" bgcolor="#ffffff">
+                            <tr>
+								<!-- This is where footer content goes. -->
+                                <td align="center" valign="top">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+</body>
+</html>

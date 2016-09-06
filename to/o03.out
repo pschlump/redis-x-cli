@@ -1,0 +1,22 @@
+Connected to postgres(192.168.0.151:5433) server.
+_row_ | id                                   | name | value1 | value2     | value3                         | value4                                     
+    1 | 59ecefed-7b11-448b-bfc8-6b4874f31871 | t1   | 121212 | 123456.789 | 2014-12-08T19:32:56.4954+0000  | the quick brown fox jumps over the lazy dog
+    2 | 9e5f894f-5521-4a07-b41f-67273d47676f | t2   | 121212 | 123456.789 | 2014-12-08T19:34:53.05626+0000 | the quick brown fox jumps over the lazy dog
+<data>
+	<row rowno="0">
+		<><nil></>
+		<id>59ecefed-7b11-448b-bfc8-6b4874f31871</id>
+		<name>t1</name>
+		<value1>121212</value1>
+		<value2>123456.789</value2>
+		<value3>2014-12-08T19:32:56.4954+0000</value3>
+	</row>
+	<row rowno="1">
+		<><nil></>
+		<id>9e5f894f-5521-4a07-b41f-67273d47676f</id>
+		<name>t2</name>
+		<value1>121212</value1>
+		<value2>123456.789</value2>
+		<value3>2014-12-08T19:34:53.05626+0000</value3>
+	</row>
+</data>

@@ -1,0 +1,208 @@
+Connected to postgres(192.168.0.151:5433) server.
+id=2345
+_row_ | ?column?
+    1 | 2345    
+id=2344
+_row_ | ?column?
+    1 | 2344    
+id=2347
+_row_ | ?column?
+    1 | 2347    
+id=2346
+_row_ | ?column?
+    1 | 2346    
+id=2367
+_row_ | ?column?
+    1 | 2367    
+id=2355
+_row_ | ?column?
+    1 | 2355    
+id=2707
+_row_ | ?column?
+    1 | 2707    
+id=2581
+_row_ | ?column?
+    1 | 2581    
+id=2418
+_row_ | ?column?
+    1 | 2418    
+id=2647
+_row_ | ?column?
+    1 | 2647    
+id=2555
+_row_ | ?column?
+    1 | 2555    
+id=2368
+_row_ | ?column?
+    1 | 2368    
+id=2373
+_row_ | ?column?
+    1 | 2373    
+id=2349
+_row_ | ?column?
+    1 | 2349    
+id=2348
+_row_ | ?column?
+    1 | 2348    
+{
+	"Obs": [
+		{
+			"ActionPlans": null,
+			"id": "2345",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": [
+				{
+					"actionCompleted": null,
+					"actionPlan": "bbbbbbbbbbbbbbbbbb",
+					"cardId": "2344",
+					"dateEntered": "2014-06-11T09:57:27.91427+0000",
+					"email": null,
+					"firstName": null,
+					"id": "ca1f4f11-b6c6-48a8-a776-5bfa13abfd83",
+					"isDeleted": 0,
+					"lastName": null,
+					"notes": null,
+					"phone": null,
+					"responsiblePersonId": null,
+					"sequence": 7,
+					"targetCompletion": "2014-06-18T06:00:00+0000"
+				},
+				{
+					"actionCompleted": "2014-06-11T00:00:00+0000",
+					"actionPlan": "ooo",
+					"cardId": "2344",
+					"dateEntered": "2014-06-11T09:51:47.43793+0000",
+					"email": null,
+					"firstName": null,
+					"id": "7a335ba7-b9a7-47a7-87a3-ac2428c039a4",
+					"isDeleted": 0,
+					"lastName": null,
+					"notes": "u",
+					"phone": null,
+					"responsiblePersonId": null,
+					"sequence": 6,
+					"targetCompletion": "2014-06-13T00:00:00+0000"
+				}
+			],
+			"id": "2344",
+			"submittedBy": "Will Collier"
+		},
+		{
+			"ActionPlans": null,
+			"id": "2347",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": null,
+			"id": "2346",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": null,
+			"id": "2367",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": [
+				{
+					"actionCompleted": null,
+					"actionPlan": "oo",
+					"cardId": "2355",
+					"dateEntered": "2014-06-10T16:34:53.7229+0000",
+					"email": null,
+					"firstName": null,
+					"id": "7a2bbb86-2c9d-4352-93f0-c6fa6d694d68",
+					"isDeleted": 0,
+					"lastName": null,
+					"notes": null,
+					"phone": null,
+					"responsiblePersonId": null,
+					"sequence": 4,
+					"targetCompletion": "2014-06-11T06:00:00+0000"
+				}
+			],
+			"id": "2355",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": null,
+			"id": "2707",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": null,
+			"id": "2581",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": null,
+			"id": "2418",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": null,
+			"id": "2647",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": null,
+			"id": "2555",
+			"submittedBy": "Trent Nannemann"
+		},
+		{
+			"ActionPlans": null,
+			"id": "2368",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": null,
+			"id": "2373",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": null,
+			"id": "2349",
+			"submittedBy": null
+		},
+		{
+			"ActionPlans": null,
+			"id": "2348",
+			"submittedBy": null
+		}
+	],
+	"__0__": "./go-sql",
+	"__10__": "",
+	"__11__": "",
+	"__12__": "",
+	"__13__": "",
+	"__14__": "",
+	"__15__": "",
+	"__16__": "",
+	"__17__": "",
+	"__18__": "",
+	"__19__": "",
+	"__1__": "",
+	"__2__": "",
+	"__3__": "",
+	"__4__": "",
+	"__5__": "",
+	"__6__": "",
+	"__7__": "",
+	"__8__": "",
+	"__9__": "",
+	"__debug__": "off",
+	"__echo__": "off",
+	"__input_file__": "td/t28.sel",
+	"__line_no__": "22",
+	"__path__": ".",
+	"_seq_": "0",
+	"id": "2348",
+	"name": "t1",
+	"submittedBy": null,
+	"value1": "121221",
+	"value2": "123456.789000",
+	"value3": "2014-05-10T15:41:33.0834+0000",
+	"value4": "the quick brown fox jumps over the lazy dog"
+}

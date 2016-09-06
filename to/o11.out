@@ -1,0 +1,904 @@
+Connected to postgres(192.168.0.151:5433) server.
+Warning(12011): Select returnd 2 rows, only the 1st one was used.
+{
+	"Cars": [
+		{
+			"CarId": "TXUX 073778",
+			"Gross": 142.525,
+			"Net": 117.625,
+			"Sequence": 1,
+			"Tare": 24.9
+		},
+		{
+			"CarId": "TXUX 050415",
+			"Gross": 142.775,
+			"Net": 118.625,
+			"Sequence": 2,
+			"Tare": 24.15
+		},
+		{
+			"CarId": "TXUX 050565",
+			"Gross": 142.55,
+			"Net": 117.95,
+			"Sequence": 3,
+			"Tare": 24.6
+		},
+		{
+			"CarId": "TXUX 053155",
+			"Gross": 142.55,
+			"Net": 118.4,
+			"Sequence": 4,
+			"Tare": 24.15
+		},
+		{
+			"CarId": "TXUX 050192",
+			"Gross": 142.75,
+			"Net": 118.05,
+			"Sequence": 5,
+			"Tare": 24.7
+		},
+		{
+			"CarId": "TXUX 083335",
+			"Gross": 142.825,
+			"Net": 118.325,
+			"Sequence": 6,
+			"Tare": 24.5
+		},
+		{
+			"CarId": "TXUX 083336",
+			"Gross": 142.775,
+			"Net": 118.425,
+			"Sequence": 7,
+			"Tare": 24.35
+		},
+		{
+			"CarId": "TXUX 083333",
+			"Gross": 142.85,
+			"Net": 118.15,
+			"Sequence": 8,
+			"Tare": 24.7
+		},
+		{
+			"CarId": "TXUX 083342",
+			"Gross": 142.85,
+			"Net": 118.7,
+			"Sequence": 9,
+			"Tare": 24.15
+		},
+		{
+			"CarId": "TXUX 083338",
+			"Gross": 142.8,
+			"Net": 118.3,
+			"Sequence": 10,
+			"Tare": 24.5
+		},
+		{
+			"CarId": "TXUX 083337",
+			"Gross": 142.775,
+			"Net": 118.225,
+			"Sequence": 11,
+			"Tare": 24.55
+		},
+		{
+			"CarId": "TXUX 050200",
+			"Gross": 142.725,
+			"Net": 117.975,
+			"Sequence": 12,
+			"Tare": 24.75
+		},
+		{
+			"CarId": "TXUX 990511",
+			"Gross": 142.8,
+			"Net": 118.65,
+			"Sequence": 13,
+			"Tare": 24.15
+		},
+		{
+			"CarId": "TXUX 990415",
+			"Gross": 142.75,
+			"Net": 118.25,
+			"Sequence": 14,
+			"Tare": 24.5
+		},
+		{
+			"CarId": "TXUX 050451",
+			"Gross": 142.8,
+			"Net": 119.2,
+			"Sequence": 15,
+			"Tare": 23.6
+		},
+		{
+			"CarId": "TXUX 990213",
+			"Gross": 142.7,
+			"Net": 117.85,
+			"Sequence": 16,
+			"Tare": 24.85
+		},
+		{
+			"CarId": "TXUX 990891",
+			"Gross": 142.775,
+			"Net": 118.375,
+			"Sequence": 17,
+			"Tare": 24.4
+		},
+		{
+			"CarId": "TXUX 990529",
+			"Gross": 142.7,
+			"Net": 119.25,
+			"Sequence": 18,
+			"Tare": 23.45
+		},
+		{
+			"CarId": "TXUX 990887",
+			"Gross": 142.65,
+			"Net": 117.65,
+			"Sequence": 19,
+			"Tare": 25
+		},
+		{
+			"CarId": "TXUX 990476",
+			"Gross": 142.7,
+			"Net": 118.45,
+			"Sequence": 20,
+			"Tare": 24.25
+		},
+		{
+			"CarId": "TXUX 990528",
+			"Gross": 142.775,
+			"Net": 118.875,
+			"Sequence": 21,
+			"Tare": 23.9
+		},
+		{
+			"CarId": "TXUX 990254",
+			"Gross": 142.775,
+			"Net": 118.325,
+			"Sequence": 22,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 990688",
+			"Gross": 142.625,
+			"Net": 118.675,
+			"Sequence": 23,
+			"Tare": 23.95
+		},
+		{
+			"CarId": "TXUX 990111",
+			"Gross": 142.55,
+			"Net": 118.15,
+			"Sequence": 24,
+			"Tare": 24.4
+		},
+		{
+			"CarId": "TXUX 990489",
+			"Gross": 142.55,
+			"Net": 118.35,
+			"Sequence": 25,
+			"Tare": 24.2
+		},
+		{
+			"CarId": "TXUX 990888",
+			"Gross": 142.425,
+			"Net": 117.625,
+			"Sequence": 26,
+			"Tare": 24.8
+		},
+		{
+			"CarId": "TXUX 050139",
+			"Gross": 142.45,
+			"Net": 118.35,
+			"Sequence": 27,
+			"Tare": 24.1
+		},
+		{
+			"CarId": "TXUX 990490",
+			"Gross": 142.525,
+			"Net": 118.075,
+			"Sequence": 28,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 073339",
+			"Gross": 142.75,
+			"Net": 118.65,
+			"Sequence": 29,
+			"Tare": 24.1
+		},
+		{
+			"CarId": "TXUX 990121",
+			"Gross": 142.775,
+			"Net": 118.375,
+			"Sequence": 30,
+			"Tare": 24.4
+		},
+		{
+			"CarId": "TXUX 073983",
+			"Gross": 142.825,
+			"Net": 118.825,
+			"Sequence": 31,
+			"Tare": 24
+		},
+		{
+			"CarId": "TXUX 050479",
+			"Gross": 142.7,
+			"Net": 118.15,
+			"Sequence": 32,
+			"Tare": 24.55
+		},
+		{
+			"CarId": "TXUX 083359",
+			"Gross": 142.7,
+			"Net": 118.35,
+			"Sequence": 33,
+			"Tare": 24.35
+		},
+		{
+			"CarId": "TXUX 083308",
+			"Gross": 142.725,
+			"Net": 118.125,
+			"Sequence": 34,
+			"Tare": 24.6
+		},
+		{
+			"CarId": "TXUX 083304",
+			"Gross": 142.75,
+			"Net": 118.35,
+			"Sequence": 35,
+			"Tare": 24.4
+		},
+		{
+			"CarId": "TXUX 083302",
+			"Gross": 142.725,
+			"Net": 118.325,
+			"Sequence": 36,
+			"Tare": 24.4
+		},
+		{
+			"CarId": "TXUX 083307",
+			"Gross": 142.725,
+			"Net": 118.475,
+			"Sequence": 37,
+			"Tare": 24.25
+		},
+		{
+			"CarId": "TXUX 050506",
+			"Gross": 142.8,
+			"Net": 118.7,
+			"Sequence": 38,
+			"Tare": 24.1
+		},
+		{
+			"CarId": "TXUX 073275",
+			"Gross": 142.8,
+			"Net": 118.55,
+			"Sequence": 39,
+			"Tare": 24.25
+		},
+		{
+			"CarId": "TXUX 990147",
+			"Gross": 142.725,
+			"Net": 118.375,
+			"Sequence": 40,
+			"Tare": 24.35
+		},
+		{
+			"CarId": "TXUX 990328",
+			"Gross": 142.75,
+			"Net": 118.4,
+			"Sequence": 41,
+			"Tare": 24.35
+		},
+		{
+			"CarId": "TXUX 990250",
+			"Gross": 142.7,
+			"Net": 118.1,
+			"Sequence": 42,
+			"Tare": 24.6
+		},
+		{
+			"CarId": "TXUX 083248",
+			"Gross": 142.7,
+			"Net": 118.7,
+			"Sequence": 43,
+			"Tare": 24
+		},
+		{
+			"CarId": "TXUX 990311",
+			"Gross": 142.75,
+			"Net": 118.2,
+			"Sequence": 44,
+			"Tare": 24.55
+		},
+		{
+			"CarId": "TXUX 990313",
+			"Gross": 142.7,
+			"Net": 118.3,
+			"Sequence": 45,
+			"Tare": 24.4
+		},
+		{
+			"CarId": "TXUX 990731",
+			"Gross": 142.65,
+			"Net": 118.2,
+			"Sequence": 46,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 990401",
+			"Gross": 142.65,
+			"Net": 118.7,
+			"Sequence": 47,
+			"Tare": 23.95
+		},
+		{
+			"CarId": "TXUX 990212",
+			"Gross": 142.65,
+			"Net": 118.15,
+			"Sequence": 48,
+			"Tare": 24.5
+		},
+		{
+			"CarId": "TXUX 050260",
+			"Gross": 142.5,
+			"Net": 118.2,
+			"Sequence": 49,
+			"Tare": 24.3
+		},
+		{
+			"CarId": "TXUX 050682",
+			"Gross": 142.675,
+			"Net": 118.375,
+			"Sequence": 50,
+			"Tare": 24.3
+		},
+		{
+			"CarId": "TXUX 073915",
+			"Gross": 142.65,
+			"Net": 118.6,
+			"Sequence": 51,
+			"Tare": 24.05
+		},
+		{
+			"CarId": "TXUX 074042",
+			"Gross": 142.65,
+			"Net": 118.35,
+			"Sequence": 52,
+			"Tare": 24.3
+		},
+		{
+			"CarId": "TXUX 050057",
+			"Gross": 142.675,
+			"Net": 118.475,
+			"Sequence": 53,
+			"Tare": 24.2
+		},
+		{
+			"CarId": "TXUX 073869",
+			"Gross": 142.675,
+			"Net": 118.475,
+			"Sequence": 54,
+			"Tare": 24.2
+		},
+		{
+			"CarId": "TXUX 050620",
+			"Gross": 142.625,
+			"Net": 118.125,
+			"Sequence": 55,
+			"Tare": 24.5
+		},
+		{
+			"CarId": "TXUX 053258",
+			"Gross": 142.5,
+			"Net": 118.2,
+			"Sequence": 56,
+			"Tare": 24.3
+		},
+		{
+			"CarId": "TXUX 073470",
+			"Gross": 142.625,
+			"Net": 118.325,
+			"Sequence": 57,
+			"Tare": 24.3
+		},
+		{
+			"CarId": "TXUX 083156",
+			"Gross": 142.575,
+			"Net": 118.525,
+			"Sequence": 58,
+			"Tare": 24.05
+		},
+		{
+			"CarId": "TXUX 073495",
+			"Gross": 142.625,
+			"Net": 118.575,
+			"Sequence": 59,
+			"Tare": 24.05
+		},
+		{
+			"CarId": "TXUX 990197",
+			"Gross": 142.625,
+			"Net": 118.675,
+			"Sequence": 60,
+			"Tare": 23.95
+		},
+		{
+			"CarId": "TXUX 083054",
+			"Gross": 142.65,
+			"Net": 118.2,
+			"Sequence": 61,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 050289",
+			"Gross": 142.675,
+			"Net": 118.375,
+			"Sequence": 62,
+			"Tare": 24.3
+		},
+		{
+			"CarId": "TXUX 050539",
+			"Gross": 142.65,
+			"Net": 118.25,
+			"Sequence": 63,
+			"Tare": 24.4
+		},
+		{
+			"CarId": "TXUX 990411",
+			"Gross": 142.625,
+			"Net": 118.625,
+			"Sequence": 64,
+			"Tare": 24
+		},
+		{
+			"CarId": "TXUX 073605",
+			"Gross": 142.625,
+			"Net": 118.475,
+			"Sequence": 65,
+			"Tare": 24.15
+		},
+		{
+			"CarId": "TXUX 053096",
+			"Gross": 142.65,
+			"Net": 118.4,
+			"Sequence": 66,
+			"Tare": 24.25
+		},
+		{
+			"CarId": "TXUX 073590",
+			"Gross": 142.55,
+			"Net": 118.6,
+			"Sequence": 67,
+			"Tare": 23.95
+		},
+		{
+			"CarId": "TXUX 073312",
+			"Gross": 142.55,
+			"Net": 118.4,
+			"Sequence": 68,
+			"Tare": 24.15
+		},
+		{
+			"CarId": "TXUX 050413",
+			"Gross": 142.475,
+			"Net": 118.025,
+			"Sequence": 69,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 990455",
+			"Gross": 142.525,
+			"Net": 118.025,
+			"Sequence": 70,
+			"Tare": 24.5
+		},
+		{
+			"CarId": "TXUX 073871",
+			"Gross": 142.55,
+			"Net": 118.45,
+			"Sequence": 71,
+			"Tare": 24.1
+		},
+		{
+			"CarId": "TXUX 083367",
+			"Gross": 142.625,
+			"Net": 118.225,
+			"Sequence": 72,
+			"Tare": 24.4
+		},
+		{
+			"CarId": "TXUX 083020",
+			"Gross": 142.65,
+			"Net": 118.1,
+			"Sequence": 73,
+			"Tare": 24.55
+		},
+		{
+			"CarId": "TXUX 083018",
+			"Gross": 142.675,
+			"Net": 117.975,
+			"Sequence": 74,
+			"Tare": 24.7
+		},
+		{
+			"CarId": "TXUX 073444",
+			"Gross": 142.7,
+			"Net": 118.7,
+			"Sequence": 75,
+			"Tare": 24
+		},
+		{
+			"CarId": "TXUX 073167",
+			"Gross": 142.7,
+			"Net": 118.25,
+			"Sequence": 76,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 073877",
+			"Gross": 142.65,
+			"Net": 118.45,
+			"Sequence": 77,
+			"Tare": 24.2
+		},
+		{
+			"CarId": "TXUX 073544",
+			"Gross": 142.6,
+			"Net": 118.4,
+			"Sequence": 78,
+			"Tare": 24.2
+		},
+		{
+			"CarId": "TXUX 083140",
+			"Gross": 142.675,
+			"Net": 118.275,
+			"Sequence": 79,
+			"Tare": 24.4
+		},
+		{
+			"CarId": "TXUX 073844",
+			"Gross": 142.625,
+			"Net": 114.375,
+			"Sequence": 80,
+			"Tare": 28.25
+		},
+		{
+			"CarId": "TXUX 073843",
+			"Gross": 142.625,
+			"Net": 118.575,
+			"Sequence": 81,
+			"Tare": 24.05
+		},
+		{
+			"CarId": "TXUX 073593",
+			"Gross": 142.575,
+			"Net": 118.575,
+			"Sequence": 82,
+			"Tare": 24
+		},
+		{
+			"CarId": "TXUX 990472",
+			"Gross": 142.65,
+			"Net": 118.3,
+			"Sequence": 83,
+			"Tare": 24.35
+		},
+		{
+			"CarId": "TXUX 083328",
+			"Gross": 142.625,
+			"Net": 118.125,
+			"Sequence": 84,
+			"Tare": 24.5
+		},
+		{
+			"CarId": "TXUX 083340",
+			"Gross": 142.65,
+			"Net": 118.3,
+			"Sequence": 85,
+			"Tare": 24.35
+		},
+		{
+			"CarId": "TXUX 073393",
+			"Gross": 142.65,
+			"Net": 114.95,
+			"Sequence": 86,
+			"Tare": 27.7
+		},
+		{
+			"CarId": "TXUX 050391",
+			"Gross": 142.425,
+			"Net": 117.975,
+			"Sequence": 87,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 050213",
+			"Gross": 142.65,
+			"Net": 118.8,
+			"Sequence": 88,
+			"Tare": 23.85
+		},
+		{
+			"CarId": "TXUX 050556",
+			"Gross": 142.6,
+			"Net": 118.3,
+			"Sequence": 89,
+			"Tare": 24.3
+		},
+		{
+			"CarId": "TXUX 990350",
+			"Gross": 142.625,
+			"Net": 118.125,
+			"Sequence": 90,
+			"Tare": 24.5
+		},
+		{
+			"CarId": "TXUX 990926",
+			"Gross": 142.6,
+			"Net": 118.35,
+			"Sequence": 91,
+			"Tare": 24.25
+		},
+		{
+			"CarId": "TXUX 050680",
+			"Gross": 142.4,
+			"Net": 118,
+			"Sequence": 92,
+			"Tare": 24.4
+		},
+		{
+			"CarId": "TXUX 073421",
+			"Gross": 142.6,
+			"Net": 118.45,
+			"Sequence": 93,
+			"Tare": 24.15
+		},
+		{
+			"CarId": "TXUX 083406",
+			"Gross": 142.65,
+			"Net": 118.2,
+			"Sequence": 94,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 990038",
+			"Gross": 142.725,
+			"Net": 118.375,
+			"Sequence": 95,
+			"Tare": 24.35
+		},
+		{
+			"CarId": "TXUX 073678",
+			"Gross": 142.6,
+			"Net": 118.45,
+			"Sequence": 96,
+			"Tare": 24.15
+		},
+		{
+			"CarId": "TXUX 073908",
+			"Gross": 142.675,
+			"Net": 118.625,
+			"Sequence": 97,
+			"Tare": 24.05
+		},
+		{
+			"CarId": "TXUX 050006",
+			"Gross": 142.65,
+			"Net": 118.3,
+			"Sequence": 98,
+			"Tare": 24.35
+		},
+		{
+			"CarId": "TXUX 050178",
+			"Gross": 142.625,
+			"Net": 118.275,
+			"Sequence": 99,
+			"Tare": 24.35
+		},
+		{
+			"CarId": "TXUX 053125",
+			"Gross": 142.65,
+			"Net": 118.1,
+			"Sequence": 100,
+			"Tare": 24.55
+		},
+		{
+			"CarId": "NCUX 012308",
+			"Gross": 142.625,
+			"Net": 118.175,
+			"Sequence": 101,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 096052",
+			"Gross": 142.625,
+			"Net": 117.125,
+			"Sequence": 102,
+			"Tare": 25.5
+		},
+		{
+			"CarId": "TXUX 990470",
+			"Gross": 142.55,
+			"Net": 118.4,
+			"Sequence": 103,
+			"Tare": 24.15
+		},
+		{
+			"CarId": "TXUX 083322",
+			"Gross": 142.625,
+			"Net": 118.125,
+			"Sequence": 104,
+			"Tare": 24.5
+		},
+		{
+			"CarId": "TXUX 083321",
+			"Gross": 141.1,
+			"Net": 116.55,
+			"Sequence": 105,
+			"Tare": 24.55
+		},
+		{
+			"CarId": "TXUX 083346",
+			"Gross": 139.5,
+			"Net": 115.05,
+			"Sequence": 106,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 083348",
+			"Gross": 142.55,
+			"Net": 118.2,
+			"Sequence": 107,
+			"Tare": 24.35
+		},
+		{
+			"CarId": "TXUX 083345",
+			"Gross": 141.6,
+			"Net": 117.2,
+			"Sequence": 108,
+			"Tare": 24.4
+		},
+		{
+			"CarId": "TXUX 083344",
+			"Gross": 142.45,
+			"Net": 118,
+			"Sequence": 109,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 083360",
+			"Gross": 142.4,
+			"Net": 117.9,
+			"Sequence": 110,
+			"Tare": 24.5
+		},
+		{
+			"CarId": "TXUX 073940",
+			"Gross": 142.275,
+			"Net": 117.975,
+			"Sequence": 111,
+			"Tare": 24.3
+		},
+		{
+			"CarId": "TXUX 083372",
+			"Gross": 142.075,
+			"Net": 117.575,
+			"Sequence": 112,
+			"Tare": 24.5
+		},
+		{
+			"CarId": "TXUX 083376",
+			"Gross": 142.65,
+			"Net": 118.2,
+			"Sequence": 113,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 050267",
+			"Gross": 142.425,
+			"Net": 117.975,
+			"Sequence": 114,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 083291",
+			"Gross": 142.65,
+			"Net": 118.2,
+			"Sequence": 115,
+			"Tare": 24.45
+		},
+		{
+			"CarId": "TXUX 083049",
+			"Gross": 142.425,
+			"Net": 117.825,
+			"Sequence": 116,
+			"Tare": 24.6
+		},
+		{
+			"CarId": "TXUX 083396",
+			"Gross": 142.65,
+			"Net": 118,
+			"Sequence": 117,
+			"Tare": 24.65
+		},
+		{
+			"CarId": "TXUX 083393",
+			"Gross": 142.65,
+			"Net": 118,
+			"Sequence": 118,
+			"Tare": 24.65
+		},
+		{
+			"CarId": "TXUX 050316",
+			"Gross": 142.65,
+			"Net": 118.35,
+			"Sequence": 119,
+			"Tare": 24.3
+		},
+		{
+			"CarId": "TXUX 073154",
+			"Gross": 142.7,
+			"Net": 118.6,
+			"Sequence": 120,
+			"Tare": 24.1
+		},
+		{
+			"CarId": "TXUX 073142",
+			"Gross": 142.65,
+			"Net": 118.4,
+			"Sequence": 121,
+			"Tare": 24.25
+		},
+		{
+			"CarId": "TXUX 073721",
+			"Gross": 142.7,
+			"Net": 118.4,
+			"Sequence": 122,
+			"Tare": 24.3
+		},
+		{
+			"CarId": "TXUX 073722",
+			"Gross": 142.675,
+			"Net": 118.525,
+			"Sequence": 123,
+			"Tare": 24.15
+		},
+		{
+			"CarId": "TXUX 083124",
+			"Gross": 142.425,
+			"Net": 116.975,
+			"Sequence": 124,
+			"Tare": 25.45
+		}
+	],
+	"CompanyName": "Alpha Coal Sales, LLC",
+	"CustomerAddress": null,
+	"CustomerCityStateZip": null,
+	"CustomerName": null,
+	"FreightAddress": "500 N. Akard Street, LP-13",
+	"FreightCityStateZip": "Dallas TX 75201",
+	"FreightPayer": "Luminant Energy Company, LLC",
+	"Manifest": "62899",
+	"ManifestId": "62899",
+	"MineContactName": "Leslee Ransone",
+	"MineContactPhone": "(307) 687-3477",
+	"MineName": "Eagle Butte Mine",
+	"NowFmt": "05/08/2014 04:46:04 pm",
+	"PowerPlantAddress": null,
+	"PowerPlantCityStateZip": "Monticello TX",
+	"PowerPlantName": "Monticello Generating Station",
+	"SalesOrderList": "",
+	"TrainIdOut": "C EBMKCM0 25P",
+	"__0__": "./go-sql",
+	"__debug__": "off",
+	"__echo__": "off",
+	"__input_file__": "td/t11.sel",
+	"__line_no__": "11",
+	"__path__": ".",
+	"id": "b5deca79-d137-46e8-9042-af3e26f94881",
+	"name": "t1",
+	"value1": "121212",
+	"value2": "123456.789000",
+	"value3": "2014-05-10T15:41:33.0834Z",
+	"value4": "the quick brown fox jumps over the lazy dog"
+}

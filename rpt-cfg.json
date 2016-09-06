@@ -1,0 +1,10 @@
+{
+	"cmds":[
+		 "ls"
+		,"go-sql"
+		,"./go-sql"
+	]
+	,"rpts":[
+		"t27.rpt"
+	]
+}

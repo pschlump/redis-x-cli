@@ -1,0 +1,35 @@
+
+## About : go-sql
+
+Version: 0.9.1
+
+Sat May 17 08:57:03 MDT 2014
+
+go-sql is a data conversion and reporting program.
+
+(C) Philip Schlump, 2013-2015.
+
+Website:
+	http://www.2c-why.com/go-sql
+
+Support is available for full versions of the program.  Put "support:go-sql" in the 
+subject of the email.  Remeber to include the Version above, your platform (Windows,
+Mac, Linux) the vesion of the OS that you are on and contact information.  Clearly
+explain the problem that you are having.
+
+	Email:  pschlump@gmail.com
+
+Supported Platforms Are:
+
+	Linux (unbuntu 14.04+, redhat, oracle)
+		PostgreSQL 9.3 or newer
+		Orcle 12.x or newer
+		MS-SQL (SqlServer) 2008 or newer via Free-TDS odbc
+
+	Mac OS X 10.8 or newer
+		PostgreSQL 9.3 or newer
+
+	Windows 7.x or 8.x or newer
+		MS-SQL (SqlServer) 2008 or newer 
+		PostgreSQL 9.3 or newer
+

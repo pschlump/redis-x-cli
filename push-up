@@ -1,0 +1,2 @@
+
+s3cmd put --acl-public --guess-mime-type README.html s3://rod-brown/README.html

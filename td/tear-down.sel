@@ -1,0 +1,7 @@
+
+drop table "t_test_crud" ;
+drop table "t_test_crud2";
+drop table "train_cars" ;
+drop table "train_hdr" ;
+
+

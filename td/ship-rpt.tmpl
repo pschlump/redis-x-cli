@@ -1,0 +1,42 @@
+{{define "report"}}
+<style>
+span.ind {
+	padding-left:20px;
+	font-weight: bold;
+	font-size:18px;
+}
+div.space_below {
+	padding-bottom:30px;
+}
+div.box {
+	border: 1px solid gray;
+	width: 50%;
+	padding: 15px;
+	display: inline-box;
+}
+</style>
+<div class="box">
+
+<div class="space_below">
+From:<br>
+{{if ifIsNotNull . "f_business_name"}}<span class="ind">{{.f_business_name}} <br></span>{{end}}
+{{if ifIsNotNull . "f_line_1"}}<span class="ind">{{.f_line_1}} <br></span>{{end}}
+{{if ifIsNotNull . "f_line_2"}}<span class="ind">{{.f_line_2}} <br></span>{{end}}
+{{if ifIsNotNull . "f_line_3"}}<span class="ind">{{.f_line_3}} <br></span>{{end}}
+{{if ifIsNotNull . "f_suite_apt"}}<span class="ind">{{.f_suite_apt}} <br></span>{{end}}
+<span class="ind">{{.f_city}} {{.f_state}}, {{.f_postal_code}} <br></span>
+</div>
+
+<div>
+To:<br>
+{{if ifIsNotNull . "s_business_name"}}<span class="ind">{{.s_business_name}} <br></span>{{end}}
+<span class="ind">{{.s_first_name}} {{.s_last_name}} <br></span>
+{{if ifIsNotNull . "s_line_1"}}<span class="ind">{{.s_line_1}} <br></span>{{end}}
+{{if ifIsNotNull . "s_line_2"}}<span class="ind">{{.s_line_2}} <br></span>{{end}}
+{{if ifIsNotNull . "s_line_3"}}<span class="ind">{{.s_line_3}} <br></span>{{end}}
+{{if ifIsNotNull . "s_suite_apt"}}<span class="ind">{{.s_suite_apt}} <br></span>{{end}}
+<span class="ind">{{.s_city}} {{.s_state}}, {{.s_postal_code}} <br></span>
+</div>
+
+</div>
+{{end}}

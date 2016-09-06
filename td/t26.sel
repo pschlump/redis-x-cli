@@ -1,0 +1,4 @@
+loop select * from "t_test_crud2";
+echo "id={{.id}}"
+end-loop
+quit

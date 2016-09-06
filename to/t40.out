@@ -1,0 +1,4 @@
+update [bob2] set [name] = 't1', [value1] = '121212', [value2] = '123456.789', [value3] = '2014-12-08T19:32:56.4954+0000', [value4] = 'the quick brown fox jumps over the lazy dog' where [id] = '59ecefed-7b11-448b-bfc8-6b4874f31871';
+insert into [bob2] ( [id], [name], [value1], [value2], [value3], [value4] ) values ( '59ecefed-7b11-448b-bfc8-6b4874f31871', 't1', '121212', '123456.789', '2014-12-08T19:32:56.4954+0000', 'the quick brown fox jumps over the lazy dog' );
+update [bob2] set [name] = 't2', [value1] = '121212', [value2] = '123456.789', [value3] = '2014-12-08T19:34:53.05626+0000', [value4] = 'the quick brown fox jumps over the lazy dog' where [id] = '9e5f894f-5521-4a07-b41f-67273d47676f';
+insert into [bob2] ( [id], [name], [value1], [value2], [value3], [value4] ) values ( '9e5f894f-5521-4a07-b41f-67273d47676f', 't2', '121212', '123456.789', '2014-12-08T19:34:53.05626+0000', 'the quick brown fox jumps over the lazy dog' );

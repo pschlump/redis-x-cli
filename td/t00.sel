@@ -1,0 +1,10 @@
+# Test -00-
+# Sun May 18 09:33:02 MDT 2014
+# 
+# Generate a formatted report with go-sql use the "colspec"/set-txt-format
+
+set-txt-format td/t_test_crud.fmt
+set fmt txt-fmt
+select * from "t_test_crud2";
+quit
+

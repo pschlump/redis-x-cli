@@ -1,0 +1,7 @@
+Connected to postgres(192.168.0.151:5433) server.
+create completed.
+2 rows inserted.
+_row_ | s         
+    1 | 1         
+    2 | Debug: off
+drop completed.

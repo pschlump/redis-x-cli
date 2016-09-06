@@ -1,0 +1,25 @@
+
+save . select * from "t_test_crud2" limit 1;
+save Obs  select card."id"
+  , card."submittedBy"
+FROM "tblCard" as card
+LEFT JOIN "tblSite" as site on card."siteId" = site."id"
+LEFT JOIN "tblCategory" as category on card."categoryId" = category."id"
+LEFT JOIN "tblObservationType" as observationType on card."observationTypeId" = observationType."id"
+LEFT JOIN "tblDepartment" as department on card."departmentId" = department."id"
+LEFT JOIN "tblCrew" as crew on card."crewId" = crew."id"
+ORDER BY card."dateEntered"
+LIMIT 15
+;
+
+loop Obs ;
+echo "id={{.id}}"
+select '{{.id}}' from dual;
+-- save ActionPlans select '{{.id}}' from dual;
+save ActionPlans select "tblActionPlan"."id" ,"tblActionPlan"."cardId" ,"tblActionPlan"."sequence" ,"tblActionPlan"."actionPlan" ,"tblActionPlan"."dateEntered" ,"tblActionPlan"."targetCompletion" ,"tblActionPlan"."notes" ,"tblActionPlan"."responsiblePersonId" ,"tblActionPlan"."isDeleted" ,"tblPerson"."firstName" ,"tblPerson"."lastName" ,"tblPerson"."email" ,"tblPerson"."phone" ,"tblActionPlan"."actionCompleted" FROM "tblActionPlan" as "tblActionPlan" left join "tblPerson" as "tblPerson" on "tblActionPlan"."responsiblePersonId" = "tblPerson"."id" where "tblActionPlan"."cardId" = '{{.id}}' ;
+-- Obs[i] is implicit because of loop
+-- 1909: func DoSave ( cmd string, raw string ) ( rv string ) {
+end-loop
+print data
+quit
+

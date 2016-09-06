@@ -1,0 +1,84 @@
+{{define "report"}}
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" bgcolor="#ccffcc">
+    <tr>
+        <td align="center" valign="top">
+            <table border="0" cellpadding="20" cellspacing="0" width="800" id="emailContainer">
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0" cellpadding="20" cellspacing="0" width="100%" id="emailHeader" bgcolor="#ffffff">
+                            <tr>
+								<!-- This is where header content goes. -->
+                                <td align="center" valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+
+<h3>{{.__6__}} site={{.site}}<br>
+Daily Saftey Observation Activity Report
+</h3>
+<h5>Current Time: {{.__now__ | PicTime "YYYY-MM-DD HH:mm AM"}}</h5>
+<h4>Reporting Cards Entered from {{.from}} to {{.thru}}</h4>
+<a href="{{g "_host_"}}pdf-report/rpt-daily-{{.__run_id__}}.pdf">Printable Version</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0" cellpadding="20" cellspacing="0" width="100%" id="emailBody" bgcolor="#ffffff">
+                            <tr>
+								<!-- This is where body content goes. -->
+                                <td align="center" valign="top">
+
+<table border="1">
+	<tr>
+		<th width="10%" style="font-family:Helvetica, Arial, sans-serif; ">Links</th>
+		<th width="10%" style="font-family:Helvetica, Arial, sans-serif; ">Date</th>
+		<th width="20%" style="font-family:Helvetica, Arial, sans-serif; ">Category</th>
+		<th width="20%" style="font-family:Helvetica, Arial, sans-serif; ">Description</th>
+		<th width="20%" style="font-family:Helvetica, Arial, sans-serif; ">Action Taken</th>
+		<th width="20%" style="font-family:Helvetica, Arial, sans-serif; ">Plans</th>
+	</tr>
+	{{range .Obs}}
+	<tr>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; "><a href="{{g "_host_"}}so.html#/cards/{{.id}}" style="text-decoration:none;" target="_new">View Card</a></td>
+		<td valign="top" style=" font-size:x-small;font-family:Helvetica, Arial, sans-serif; ">{{ PicTime "YYYY-MM-DD HH:mm AM" .dateEntered }}</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">{{.category_name}}</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">{{.description}}</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">{{.result}}</td>
+		<td valign="top" style="font-family:Helvetica, Arial, sans-serif; ">
+			{{range .Plans}}
+			<div style="font-style:italic; font-size:x-small; ">
+				<p>
+					{{.actionPlan}}<br>
+					Assigned to: {{.firstName}} {{.lastName}}<br>
+					Due Date: {{.targetCompletion}} | PicDate "YYYY-MM-DD"<br>
+					<a href="{{g "_host_"}}so.html#/cards/{{.cardId}}/actionPlans/{{.id}}">Mark as Complete</a><br>
+				</p>
+			</div>
+			{{end}}
+		</td>
+	</tr>
+	{{end}}
+</table>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0" cellpadding="20" cellspacing="0" width="100%" id="emailFooter" bgcolor="#ffffff">
+                            <tr>
+								<!-- This is where footer content goes. -->
+                                <td align="center" valign="top">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+{{end}}

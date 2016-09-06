@@ -1,0 +1,56 @@
+{
+	"Paper": "A4",
+	"PaperWidth": 210,
+	"FontDir": "./gofpdf/font",
+	"HdrFontSize": 14,
+	"HdrFillColor": { "r":145, "g":178, "b": 245 },
+	"HdrTextColor": { "r":0, "g":0, "b":0 },
+	"BorderColor": { "r":12, "g":12, "b":12 },
+	"BorderWidth": 0.2,
+	"BodyFontSize": 12,
+	"BodyFillColor": { "r":222, "g":234, "b":255 },
+	"BodyTextColor": { "r":0, "g":0, "b":0 },
+	"ZebraStripe": 1,
+	"HasTitle": true,
+	"TitleStr": "Countries Report",
+	"PageNo": true,
+	"PadWidth": 5,
+	"ColsData": [
+		{
+			"ColName": "area",
+			"Width": 0,
+			"B_Width": false,
+			"Format": "",
+			"Justify": "R",
+			"ColTitle": "Area (sq km)",
+			"ColTitleJustify": "C"
+		},
+		{
+			"ColName": "name",
+			"Width": 0,
+			"B_Width": false,
+			"Format": "",
+			"Justify": "C",
+			"ColTitle": "Name",
+			"ColTitleJustify": "L"
+		},
+		{
+			"ColName": "capital",
+			"Width": 0,
+			"B_Width": false,
+			"Format": "",
+			"Justify": "R",
+			"ColTitle": "Capital",
+			"ColTitleJustify": "R"
+		},
+		{
+			"ColName": "pop",
+			"Width": 0,
+			"B_Width": false,
+			"Format": "PicFmt \"###,###,##0.00000\"",
+			"Justify": "C",
+			"ColTitle": "Pop. (thousands)",
+			"ColTitleJustify": "C"
+		}
+	]
+}

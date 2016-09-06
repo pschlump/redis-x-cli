@@ -1,0 +1,9 @@
+# Test -02-
+# Sun May 18 13:08:07 MDT 2014
+# 
+# text XML output format.
+
+select * from "t_test_crud2";
+set fmt XML
+select * from "t_test_crud2";
+quit

@@ -1,0 +1,9 @@
+-- Test 40 -
+// Test selecting data to insert statements that are targeted to a different database with insert_before_update turned on
+--
+set target odbc
+set fmt insert
+set update_before_insert on
+set table bob2
+select * from "t_test_crud2";
+quit

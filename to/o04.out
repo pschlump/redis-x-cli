@@ -1,0 +1,8 @@
+Connected to postgres(192.168.0.151:5433) server.
+_row_ | id                                   | name | value1 | value2     | value3                         | value4                                     
+    1 | 59ecefed-7b11-448b-bfc8-6b4874f31871 | t1   | 121212 | 123456.789 | 2014-12-08T19:32:56.4954+0000  | the quick brown fox jumps over the lazy dog
+    2 | 9e5f894f-5521-4a07-b41f-67273d47676f | t2   | 121212 | 123456.789 | 2014-12-08T19:34:53.05626+0000 | the quick brown fox jumps over the lazy dog
+insert into <no value> ( "id", "name", "value1", "value2", "value3", "value4" ) values ( '59ecefed-7b11-448b-bfc8-6b4874f31871', 't1', '121212', '123456.789', '2014-12-08T19:32:56.4954+0000', 'the quick brown fox jumps over the lazy dog' );
+insert into <no value> ( "value1", "value2", "value3", "value4", "id", "name" ) values ( '121212', '123456.789', '2014-12-08T19:34:53.05626+0000', 'the quick brown fox jumps over the lazy dog', '9e5f894f-5521-4a07-b41f-67273d47676f', 't2' );
+insert into newTable ( "value3", "value4", "id", "name", "value1", "value2" ) values ( '2014-12-08T19:32:56.4954+0000', 'the quick brown fox jumps over the lazy dog', '59ecefed-7b11-448b-bfc8-6b4874f31871', 't1', '121212', '123456.789' );
+insert into newTable ( "value2", "value3", "value4", "id", "name", "value1" ) values ( '123456.789', '2014-12-08T19:34:53.05626+0000', 'the quick brown fox jumps over the lazy dog', '9e5f894f-5521-4a07-b41f-67273d47676f', 't2', '121212' );

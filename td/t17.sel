@@ -1,0 +1,12 @@
+create table "t17" (
+	"s"		text
+);
+insert into "t17" ( "s" ) values
+	( '1' )
+,	( 'Debug: {{.__debug__}}' )
+;
+select *
+from "t17"
+;
+drop table "t17";
+quit

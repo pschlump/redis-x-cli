@@ -1,0 +1,8 @@
+{
+	"RedisHost":  "192.168.0.133",
+	"RedisAuth":  "lLJSmkccYJiVEwskr1RM4MWIaBM",
+	"LoggingConfig": {
+		"FileOn": "yes",
+		"RedisOn": "yes"
+	}
+}

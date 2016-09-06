@@ -1,0 +1,44 @@
+dir.go|16 col 2| a blank import should be only in a main or test package, or have a comment justifying it
+dir.go|78 col 1| comment on exported function ExistsGetUDate should be of the form "ExistsGetUDate ..."
+dir.go|102 col 1| exported function ExistsIsDir should have comment or be unexported
+dir.go|115 col 1| comment on exported function DumpVar should be of the form "DumpVar ..."
+dir.go|127 col 1| comment on exported function Basename should be of the form "Basename ..."
+dir.go|145 col 1| comment on exported function BasenameExt should be of the form "BasenameExt ..."
+dir.go|162 col 1| comment on exported function GetFilenames should be of the form "GetFilenames ..."
+dir.go|183 col 1| comment on exported function InArray should be of the form "InArray ..."
+dir.go|195 col 1| comment on exported function FilterArray should be of the form "FilterArray ..."
+dir.go|210 col 1| comment on exported function GetImageFiles should be of the form "GetImageFiles ..."
+dir.go|220 col 1| comment on exported function GetFile should be of the form "GetFile ..."
+dir.go|231 col 1| comment on exported function RmExt should be of the form "RmExt ..."
+dir.go|240 col 1| comment on exported function FnToCssClass should be of the form "FnToCssClass ..."
+dir.go|262 col 1| comment on exported function NeedRebuild should be of the form "NeedRebuild ..."
+dir.go|312 col 1| comment on exported function ReadJsonPath should be of the form "ReadJsonPath ..."
+dir.go|373 col 1| comment on exported function Exists should be of the form "Exists ..."
+dir.go|386 col 1| exported function UriToStringMap should have comment or be unexported
+dir.go|492 col 1| comment on exported function LowerCaseNames should be of the form "LowerCaseNames ..."
+dir.go|505 col 1| exported function ExtendData should have comment or be unexported
+dir.go|516 col 1| comment on exported function LeftData should be of the form "LeftData ..."
+dir.go|530 col 1| comment on exported function IntersectData should be of the form "IntersectData ..."
+dir.go|547 col 1| exported function ExtendDataS should have comment or be unexported
+dir.go|558 col 1| comment on exported function EscapeDoubleQuote should be of the form "EscapeDoubleQuote ..."
+dir.go|563 col 1| exported function EscapeError should have comment or be unexported
+dir.go|568 col 1| exported function Hex_sha1 should have comment or be unexported
+dir.go|574 col 1| comment on exported function TypeOf should be of the form "TypeOf ..."
+dir.go|602 col 1| exported function IsIntString should have comment or be unexported
+dir.go|606 col 1| exported function ParseBool should have comment or be unexported
+dir.go|615 col 1| comment on exported function HasKeys should be of the form "HasKeys ..."
+dir.go|648 col 1| exported function SubstitueUserInFilePath should have comment or be unexported
+dir.go|671 col 1| exported function SubstitueUserInFilePathImmediate should have comment or be unexported
+dir.go|697 col 1| exported function SearchPath should have comment or be unexported
+dir.go|766 col 1| comment on exported function SearchPathApp should be of the form "SearchPathApp ..."
+dir.go|845 col 1| exported function FindFiles should have comment or be unexported
+dir.go|863 col 1| exported function FindDirsWithSQLCfg should have comment or be unexported
+dir.go|894 col 1| comment on exported function Dirname should be of the form "Dirname ..."
+dir.go|907 col 1| exported function SearchPathAppModule should have comment or be unexported
+dir.go|981 col 1| exported function Fopen should have comment or be unexported
+dir.go|998 col 1| exported function DbValueFromRow should have comment or be unexported
+dir.go|1007 col 1| exported function DbValueIsNull should have comment or be unexported
+
+
+dir.go|618 col 9| should omit 2nd value from range; this loop is equivalent to `for _ = range ...`
+dir.go|979 col 5| error var invalidMode should have name of the form errFoo
