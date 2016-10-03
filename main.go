@@ -2,28 +2,31 @@ package main
 
 /*
 TODO:
-	1. Create x.get -- Partially complete
-		x.keys Pat - uses scan, sorts results on client side
-
-	2. Do some LUA
-
-	3. Figure out the JSON stuff
+	1. Code to convert return value into (array/of/array) into Tree
+		- Plus demo to JSON
+	2. All the data types for x.get
+	3. Setup Redis test environment with Redis, Cluster, Sentinal etc.
+	4. Do some LUA
+	5. Figure out the JSON stuff
 		1. How to load a file to a key
 		2. How to dump a key to a file
 		3. How to pretty print JSON in a key
 
-	4. Test reports directly from JSON in Redis			1h
+		read InMemKey Fn
+		save InMemKey Fn
+		set RKey {{.InMemKey}}
+
+	6. Test reports directly from JSON in Redis			1h
+
+
+	1. Create x.get -- Partially complete
+		x.keys Pat - uses scan, sorts results on client side
 
 	2. Write up README.md - full						4h
 		x.del
 		x.keys
 		x.get
 		x.?
-
-	3. Publish											2h
-		1. Clean up vendor+libraries
-		x. Announce to reddit.com/r/golang
-		x. Add answer on SO for this
 
 	5. Implement a Redis Pluggin - and work with that.
 	0. Test lots of Redis commands
