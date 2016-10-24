@@ -74,7 +74,10 @@ import (
 	"github.com/pschlump/redis-x-cli/terminal"       //
 	sizlib "github.com/pschlump/redis-x-cli/vsizlib" // "../go-lib/sizlib" // "github.com/pschlump/Go-FTL/server/sizlib" // "../go-lib/sizlib"
 	ms "github.com/pschlump/templatestrings"         // "../ms" // "www.2c-why.com/my-strings"  // ms // "../go-lib/ms"     // passed
+	"github.com/robertkrimen/otto"
 )
+
+// "github.com/robertkrimen/otto"
 
 const (
 	Version = "Version: 0.0.1"
@@ -2660,36 +2663,49 @@ func init() {
 	// "set":            DispatchFunc{Fx: DoRedis},
 
 	funcMap = map[string]DispatchFunc{
-		"scan":           DispatchFunc{Fx: DoRScan},
-		"hscan":          DispatchFunc{Fx: DoRScan},
-		"sscan":          DispatchFunc{Fx: DoRScan},
-		"zscan":          DispatchFunc{Fx: DoRScan},
-		"x.del":          DispatchFunc{Fx: DoXDel},
-		"x.get":          DispatchFunc{Fx: DoXGet},
-		"g.set":          DispatchFunc{Fx: DoSet},
-		"g.get":          DispatchFunc{Fx: DoGet},
-		"colspec":        DispatchFunc{Fx: SetColspec},
-		"print":          DispatchFunc{Fx: DoPrint},
-		"topdf":          DispatchFunc{Fx: DoToPdf},
-		"runTemplate":    DispatchFunc{Fx: DoTemplate},
-		"rt":             DispatchFunc{Fx: DoTemplate},
-		"send_email":     DispatchFunc{Fx: DoSendEmail},
-		"send_ftp":       DispatchFunc{Fx: DoSendFtp},
-		"send_cp":        DispatchFunc{Fx: DoCopyFile},
-		"help":           DispatchFunc{Fx: DoHelp},
-		"set-txt-format": DispatchFunc{Fx: SetColspec},
-		"set-pdf-format": DispatchFunc{Fx: SetPdfspec},
-		"r-pdf":          DispatchFunc{Fx: DoPdf},
-		"echo":           DispatchFunc{Fx: DoEcho},
-		"version":        DispatchFunc{Fx: DoVersion},
-		"file":           DispatchFunc{Fx: DoFile},
-		"spool":          DispatchFunc{Fx: DoSpool},
-		"\\o":            DispatchFunc{Fx: DoFile},
-		"end-file":       DispatchFunc{Fx: DoEndFile},
-		"loop":           DispatchFunc{Fx: DoLoop},
-		"if":             DispatchFunc{Fx: DoIf},
-		"end-loop":       DispatchFunc{Fx: DoEndLoop},
+		"scan":           DispatchFunc{Fx: DoRScan},     //
+		"hscan":          DispatchFunc{Fx: DoRScan},     //
+		"sscan":          DispatchFunc{Fx: DoRScan},     //
+		"zscan":          DispatchFunc{Fx: DoRScan},     //
+		"x.del":          DispatchFunc{Fx: DoXDel},      //
+		"x.get":          DispatchFunc{Fx: DoXGet},      //	Get keys with pattern, x.get PATTERN - should work with all key types
+		"g.set":          DispatchFunc{Fx: DoSet},       //
+		"g.get":          DispatchFunc{Fx: DoGet},       //
+		"colspec":        DispatchFunc{Fx: SetColspec},  //
+		"print":          DispatchFunc{Fx: DoPrint},     //
+		"topdf":          DispatchFunc{Fx: DoToPdf},     //
+		"runTemplate":    DispatchFunc{Fx: DoTemplate},  //
+		"rt":             DispatchFunc{Fx: DoTemplate},  //
+		"send_email":     DispatchFunc{Fx: DoSendEmail}, //
+		"send_ftp":       DispatchFunc{Fx: DoSendFtp},   //
+		"send_cp":        DispatchFunc{Fx: DoCopyFile},  //
+		"help":           DispatchFunc{Fx: DoHelp},      //
+		"set-txt-format": DispatchFunc{Fx: SetColspec},  //
+		"set-pdf-format": DispatchFunc{Fx: SetPdfspec},  //
+		"r-pdf":          DispatchFunc{Fx: DoPdf},       //
+		"echo":           DispatchFunc{Fx: DoEcho},      //
+		"version":        DispatchFunc{Fx: DoVersion},   //
+		"file":           DispatchFunc{Fx: DoFile},      //
+		"spool":          DispatchFunc{Fx: DoSpool},     //
+		"\\o":            DispatchFunc{Fx: DoFile},      //
+		"end-file":       DispatchFunc{Fx: DoEndFile},   //
+		"loop":           DispatchFunc{Fx: DoLoop},      //
+		"if":             DispatchFunc{Fx: DoIf},        //
+		"end-loop":       DispatchFunc{Fx: DoEndLoop},   //
 	}
+	// x.get PAT 				- get data
+	// x.pick PAT getFunc 		- get data, then run getFunc to extract chunk from JSON
+	//								x.pick srp:U:pschlump@uwyo.edu `rv = key["auth"]`
+	//								x.pick srp:U:* `rva.push = key["auth"]`
+	// x.update PAT updFunc		- get data, update it (JSON), save it
+	//								x.update srp:U:pschlump@uwyo.edu `key["auth"] = "y"`
+	//								x.update srp:U:* `key["auth"] = "y"`
+	// 1. if "type" of key is ... { ... }
+	// 2. {{ import "lib.js" }} as a part of JS template
+	// 3. Default JS template
+	//		var rv, rva = [], rvh = {}, key = {{.data}};
+	//		{{.code}};
+	//
 	xOut = os.Stdout
 }
 
@@ -3560,6 +3576,7 @@ func DoXDel(cmd string, raw string, nth int, words []string) (rv string) {
 }
 
 // x.get pat
+// DoXGet
 func DoXGet(cmd string, raw string, nth int, words []string) (rv string) {
 	type ListType struct {
 		Elem []string
@@ -3718,6 +3735,11 @@ func DoRedis(cmd string, raw string, nth int, words []string) (rv string) {
 		}
 	}
 	return
+}
+
+func hold_import_otto() {
+	vm := otto.New()
+	_ = vm
 }
 
 // I bid you adieu!
