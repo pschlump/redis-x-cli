@@ -2,6 +2,8 @@ package main
 
 /*
 TODO:
+	// xyzzyUpd - update JSON data
+
 	1. Code to convert return value into (array/of/array) into Tree
 		- Plus demo to JSON
 	2. All the data types for x.get
@@ -597,11 +599,23 @@ func ParseLineIntoWordsNOQ(line string) []string {
 	return rv
 }
 
+// =============================================================================================================================================================
 func ExecuteATemplate(tmpl string, data map[string]interface{}) string {
 	funcMapTmpl := template.FuncMap{
-		"title": strings.Title, // The name "title" is what the function will be called in the template text.
-		"g":     global_g,
-		"set":   global_set,
+		"title":       strings.Title,  // The name "title" is what the function will be called in the template text.
+		"g":           global_g,       //
+		"set":         global_set,     //
+		"Center":      ms.CenterStr,   //
+		"PadR":        ms.PadOnRight,  //
+		"PadL":        ms.PadOnLeft,   //
+		"PicTime":     ms.PicTime,     //
+		"FTime":       ms.StrFTime,    //
+		"PicFloat":    ms.PicFloat,    //
+		"nvl":         ms.Nvl,         //
+		"Concat":      ms.Concat,      //
+		"ifDef":       ms.IfDef,       //
+		"ifIsDef":     ms.IfIsDef,     //
+		"ifIsNotNull": ms.IfIsNotNull, //
 	}
 	t := template.New("line-template").Funcs(funcMapTmpl)
 	t, err := t.Parse(tmpl)
@@ -614,6 +628,46 @@ func ExecuteATemplate(tmpl string, data map[string]interface{}) string {
 	var b bytes.Buffer
 	foo := bufio.NewWriter(&b)
 	err = t.ExecuteTemplate(foo, "line-template", data)
+	// err = t.ExecuteTemplate(os.Stdout, "line-template", data)
+	if err != nil {
+		fmt.Fprintf(xOut, "Error(): Invalid template processing: %s\n", err)
+		return tmpl
+	}
+	foo.Flush()
+	s := b.String() // Fetch the data back from the buffer
+	// fmt.Fprintf ( xOut, "\nbuffer = %v s=->%s<-\n", b, s )
+	return s
+}
+
+// =============================================================================================================================================================
+func ExecuteATemplateByName(tmpl, tname string, data map[string]interface{}) string {
+	funcMapTmpl := template.FuncMap{
+		"title":       strings.Title,  // The name "title" is what the function will be called in the template text.
+		"g":           global_g,       //
+		"set":         global_set,     //
+		"Center":      ms.CenterStr,   //
+		"PadR":        ms.PadOnRight,  //
+		"PadL":        ms.PadOnLeft,   //
+		"PicTime":     ms.PicTime,     //
+		"FTime":       ms.StrFTime,    //
+		"PicFloat":    ms.PicFloat,    //
+		"nvl":         ms.Nvl,         //
+		"Concat":      ms.Concat,      //
+		"ifDef":       ms.IfDef,       //
+		"ifIsDef":     ms.IfIsDef,     //
+		"ifIsNotNull": ms.IfIsNotNull, //
+	}
+	t := template.New("line-template").Funcs(funcMapTmpl)
+	t, err := t.Parse(tmpl)
+	if err != nil {
+		fmt.Fprintf(xOut, "Error(): Invalid template: %s\n", err)
+		return tmpl
+	}
+
+	// Create an io.Writer to write to a string
+	var b bytes.Buffer
+	foo := bufio.NewWriter(&b)
+	err = t.ExecuteTemplate(foo, tname, data)
 	// err = t.ExecuteTemplate(os.Stdout, "line-template", data)
 	if err != nil {
 		fmt.Fprintf(xOut, "Error(): Invalid template processing: %s\n", err)
@@ -2669,8 +2723,9 @@ func init() {
 		"zscan":          DispatchFunc{Fx: DoRScan},     //
 		"x.del":          DispatchFunc{Fx: DoXDel},      //
 		"x.get":          DispatchFunc{Fx: DoXGet},      //	Get keys with pattern, x.get PATTERN - should work with all key types
-		"g.set":          DispatchFunc{Fx: DoSet},       //
-		"g.get":          DispatchFunc{Fx: DoGet},       //
+		"x.upd":          DispatchFunc{Fx: DoXUpd},      //	Get keys with pattern, x.get PATTERN - should work with all key types
+		"g.set":          DispatchFunc{Fx: DoSet},       //	Set global in-memory data with value
+		"g.get":          DispatchFunc{Fx: DoGet},       // get global in-memory data
 		"colspec":        DispatchFunc{Fx: SetColspec},  //
 		"print":          DispatchFunc{Fx: DoPrint},     //
 		"topdf":          DispatchFunc{Fx: DoToPdf},     //
@@ -2693,6 +2748,8 @@ func init() {
 		"if":             DispatchFunc{Fx: DoIf},        //
 		"end-loop":       DispatchFunc{Fx: DoEndLoop},   //
 	}
+	// g.extend KEY				-- get hash key form Redis and set in-memory data with it
+	// g.extend Name KEY		-- get form Redis and set in-memory "Name" with it -- can be value/ set/ array hash etc.  JSON data.
 	// x.get PAT 				- get data
 	// x.pick PAT getFunc 		- get data, then run getFunc to extract chunk from JSON
 	//								x.pick srp:U:pschlump@uwyo.edu `rv = key["auth"]`
@@ -3626,12 +3683,152 @@ func DoXGet(cmd string, raw string, nth int, words []string) (rv string) {
 	return
 }
 
+// x.upd pat `js`
+// DoXUpd
+func DoXUpd(cmd string, raw string, nth int, words []string) (rv string) {
+	type ListType struct {
+		Elem []string
+	}
+	var AList ListType
+	_ = DoApplyCmd(cmd, raw, nth, words, func(t1 []string, err error, ap interface{}) {
+		if err != nil {
+			fmt.Printf("error: %s\n", err)
+			return
+		}
+		AListP, ok := ap.(*ListType)
+		if !ok {
+			fmt.Printf("error: invalid type\n")
+			return
+		}
+		for _, ww := range t1 {
+			fmt.Printf("Doing get [%s]\n", ww)
+			ty := "KEY"
+			ss, e1 := client.Cmd("GET", ww).Str()
+			if e1 != nil {
+				// if "wrong type" -- TYPE key -- "set", do "set operation"
+				if strings.HasPrefix(fmt.Sprintf("%s", e1), "WRONGTYPE") {
+					ty, e1 := client.Cmd("TYPE", ww).Str()
+					if e1 != nil {
+						fmt.Printf("Unable to get type of %s, error=%s\n", ww, e1)
+					} else {
+						switch ty {
+						case "set":
+							ll, e1 := client.Cmd("SMEMBERS", ww).List()
+							if e1 != nil {
+								fmt.Printf("Unable to get set members of %s, error=%s\n", ww, e1)
+							} else {
+								AListP.Elem = append(AListP.Elem, fmt.Sprintf("set:%s", ll))
+							}
+						default:
+							fmt.Printf("Key=%s Type=%s - unable to handle\n", ww, ty)
+						}
+					}
+				} else {
+					fmt.Printf("GET Error: %s\n", e1)
+				}
+			} else {
+				o_ss := ss
+				AListP.Elem = append(AListP.Elem, ss)
+
+				data := make(map[string]interface{})
+				err_flag := false
+
+				// -----------------------------------------------------------------------------------------------------------
+				// update 'ss'
+				// (critical)
+				// 	0. xyzzyUpd - allow for ` quoted ` code in words.
+				// 	0. xyzzyUpd - Quoting of JSON code needs to be better understood - words -> quotes
+				//					set abc "{\"x\":\"y\"}" did not work as expected
+				//
+				// (later - or {{import "file"}} in template)
+				// 	0. xyzzyUpd - allow for using of stored JavaScript code chunks, or functions
+				// 	0. xyzzyUpd - allow for loading of JavaScript code
+
+				// -----------------------------------------------------------------------------------------------------------
+				//  0. Parse 'ss' to verify it is correct JSON before template substitute!
+				tmp := make(map[string]interface{})
+				err := json.Unmarshal([]byte(ss), &tmp)
+				if err != nil {
+					fmt.Printf("Key=%s Type=%s - unable to set in x.upd, error=%s, will not update due to non-JSON data\n", ww, ty, err)
+					err_flag = true
+				}
+
+				// -----------------------------------------------------------------------------------------------------------
+				//  0. xyzzyUpd - read in upd_key template -- if read in template can have functions and code in it -- also {{import "file"}}
+				upd_tmpl := `
+{{define "upd_template"}}
+// Update Template
+var data = {{.data}};
+{{.updcode}};
+var rv = JSON.stringify(data);
+{{end}}
+`
+				//  1. template substitute 'ss' -> upd_key template
+				data["data"] = ss
+
+				// data["updcode"] = `data["xxx111xxx"] = 12` // -dummy placeholder for moment
+				data["updcode"] = words[2]
+				fmt.Printf("updcode = [%s]\n", words[2])
+
+				if !err_flag {
+					// -----------------------------------------------------------------------------------------------------------
+					//  2. run it //		 func ExecuteATemplateByName(tmpl, tname string, data map[string]interface{}) string {
+					code := ExecuteATemplateByName(upd_tmpl, "upd_template", data)
+					vm := otto.New()
+					_, err := vm.Run(code)
+					if err != nil {
+						fmt.Printf("Syntax Error in JavaScript update code: %s, code run =%s\n", err, code)
+						err_flag = true
+					}
+
+					if !err_flag {
+						// -----------------------------------------------------------------------------------------------------------
+						//  3. get 'rv' from template
+						//  4. -- already done in JS -- SVar(rv) -> string, set in ss
+						if value, err := vm.Get("rv"); err == nil {
+							if value_str, err := value.ToString(); err == nil {
+								fmt.Printf("rv=%v\n", value_str)
+								ss = value_str
+							} else {
+								fmt.Printf("Error in getting results from update - err=%v\n", err)
+							}
+						}
+					}
+
+				}
+
+				// -----------------------------------------------------------------------------------------------------------
+
+				if !err_flag {
+					if o_ss != ss {
+						// set 'ss'
+						e2 := client.Cmd("SET", ww, ss).Err
+						if e2 != nil {
+							fmt.Printf("Key=%s Type=%s - unable to set in x.upd, error=%s\n", ww, ty, err)
+						}
+					}
+				}
+			}
+		}
+	}, &AList)
+	rv = tr.SVar(AList.Elem)
+	return
+}
+
 // DoAplyCmd uses "scan" to walk the fApply function across a cursor
 func DoApplyCmd(cmd string, raw string, nth int, words []string, fApply ApplyAct, fData interface{}) (rv string) {
 	rv = "Err"
-	if len(words) != 2 {
-		fmt.Printf("Usage: x.del pattern, you supplied ->%s<-\n", raw)
-		return
+	// xyzzy - clean this up
+	if cmd == "x.upd" {
+		if len(words) != 3 {
+			fmt.Printf("Usage: x.upd pattern, you supplied ->%s<- ->%s<-\n", raw, tr.SVar(words))
+			return
+		}
+	} else {
+		if len(words) != 2 {
+			fmt.Printf("Usage: x.del pattern, you supplied ->%s<-\n", raw)
+			return
+		}
 	}
 	ix := make([]interface{}, 0, 4)
 	ix = append(ix, 0)
