@@ -68,7 +68,7 @@ import (
 	em "github.com/pschlump/emailbuilder"            //
 	tr "github.com/pschlump/godebug"                 //
 	"github.com/pschlump/json"                       // "encoding/json"
-	"github.com/pschlump/pw"                         // parse-words
+	pw "github.com/pschlump/pw2"                     // parse-words -- new version
 	"github.com/pschlump/radix.v2/redis"             //
 	"github.com/pschlump/redis-x-cli/ftp4go"         // passed
 	"github.com/pschlump/redis-x-cli/gofpdf"         // passed
@@ -79,6 +79,7 @@ import (
 	"github.com/robertkrimen/otto"
 )
 
+// https://github.com/dop251/goja -- extended/replacmeent 6x as fast as otto -- Looks to be drop in replacement!
 // "github.com/robertkrimen/otto"
 
 const (
@@ -86,8 +87,6 @@ const (
 )
 
 const ISO8601 = "2006-01-02T15:04:05.99999Z07:00"
-
-var ToPdf = "/usr/local/bin/wkhtmltopdf"
 
 var g_quit bool = false
 var g_prompt string = "rcli> "
@@ -584,20 +583,21 @@ func GetValue(name string) (rv string) {
 func ParseLineIntoWords(line string) []string {
 	// rv := strings.Fields ( line )
 	Pw := pw.NewParseWords()
-	Pw.SetOptions("C", true, true)
+	// Pw.SetOptions("C", true, true)
+	Pw.SetOptions("Go", false, true)
 	Pw.SetLine(line)
 	rv := Pw.GetWords()
 	return rv
 }
 
-func ParseLineIntoWordsNOQ(line string) []string {
-	// rv := strings.Fields ( line )
-	Pw := pw.NewParseWords()
-	Pw.SetOptions("C", false, false)
-	Pw.SetLine(line)
-	rv := Pw.GetWords()
-	return rv
-}
+//func ParseLineIntoWordsNOQ(line string) []string {
+//	// rv := strings.Fields ( line )
+//	Pw := pw.NewParseWords()
+//	Pw.SetOptions("Go", false, true)
+//	Pw.SetLine(line)
+//	rv := Pw.GetWords()
+//	return rv
+//}
 
 // =============================================================================================================================================================
 func ExecuteATemplate(tmpl string, data map[string]interface{}) string {
@@ -2047,7 +2047,8 @@ var xOutStk [](*os.File)
 var xSpoolState string = ""
 
 func DoSpool(cmd string, raw string, nth int, words []string) (rv string) {
-	plist := ParseLineIntoWordsNOQ(raw)
+	// plist := ParseLineIntoWordsNOQ(raw)
+	plist := ParseLineIntoWords(raw)
 	if len(plist) > 1 {
 		if plist[1] == "off" {
 			return DoEndFile(cmd, raw, -1, []string{"--eof--"})
@@ -2063,7 +2064,8 @@ func DoSpool(cmd string, raw string, nth int, words []string) (rv string) {
 func DoFile(cmd string, raw string, nth int, words []string) (rv string) {
 	var err error
 	rv = ""
-	plist := ParseLineIntoWordsNOQ(raw)
+	//plist := ParseLineIntoWordsNOQ(raw)
+	plist := ParseLineIntoWords(raw)
 	xSpoolState = "Spooling"
 	if len(plist) > 1 {
 		xOutStk = append(xOutStk, xOut)
@@ -2108,7 +2110,8 @@ func DoVersion(cmd string, raw string, nth int, words []string) (rv string) {
 
 // =======================================================================================================================================================================
 func DoEcho(cmd string, raw string, nth int, words []string) (rv string) {
-	plist := ParseLineIntoWordsNOQ(raw)
+	// plist := ParseLineIntoWordsNOQ(raw)
+	plist := ParseLineIntoWords(raw)
 	if len(plist) > 0 {
 		sm := strings.Join(plist[1:], " ")
 		// fmt.Printf ( "->DoEcho >%s< <-\n", raw )
@@ -3118,12 +3121,12 @@ func main() {
 
 	stack := NewStateStk()
 	SetPath(".;..")
-	if string(os.PathSeparator) != "/" {
-		ToPdf = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
-
-		// Example:
-		// > wkhtmltopdf.exe file:///e:/tt.html e:/tt.pdf
-	}
+	//	if string(os.PathSeparator) != "/" {
+	//		ToPdf = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
+	//
+	//		// Example:
+	//		// > wkhtmltopdf.exe file:///e:/tt.html e:/tt.pdf
+	//	}
 
 	// var err error
 	dbFlag = make(map[string]bool)
@@ -3650,7 +3653,7 @@ func DoXGet(cmd string, raw string, nth int, words []string) (rv string) {
 			return
 		}
 		for _, ww := range t1 {
-			fmt.Printf("Doing get [%s]\n", ww)
+			// fmt.Printf("Doing get [%s]\n", ww)
 			ss, e1 := client.Cmd("GET", ww).Str()
 			if e1 != nil {
 				// if "wrong type" -- TYPE key -- "set", do "set operation"
@@ -3701,7 +3704,7 @@ func DoXUpd(cmd string, raw string, nth int, words []string) (rv string) {
 			return
 		}
 		for _, ww := range t1 {
-			fmt.Printf("Doing get [%s]\n", ww)
+			// fmt.Printf("Doing get [%s]\n", ww)
 			ty := "KEY"
 			ss, e1 := client.Cmd("GET", ww).Str()
 			if e1 != nil {
@@ -3736,8 +3739,8 @@ func DoXUpd(cmd string, raw string, nth int, words []string) (rv string) {
 				// -----------------------------------------------------------------------------------------------------------
 				// update 'ss'
 				// (critical)
-				// 	0. xyzzyUpd - allow for ` quoted ` code in words.
-				// 	0. xyzzyUpd - Quoting of JSON code needs to be better understood - words -> quotes
+				// 	*0. allow for ` quoted ` code in words.
+				// 	0. XyzzyUpd - Quoting of JSON code needs to be better understood - words -> quotes
 				//					set abc "{\"x\":\"y\"}" did not work as expected
 				//
 				// (later - or {{import "file"}} in template)
@@ -3754,7 +3757,7 @@ func DoXUpd(cmd string, raw string, nth int, words []string) (rv string) {
 				}
 
 				// -----------------------------------------------------------------------------------------------------------
-				//  0. xyzzyUpd - read in upd_key template -- if read in template can have functions and code in it -- also {{import "file"}}
+				//  0. XyzzyUpd - read in upd_key template -- if read in template can have functions and code in it -- also {{import "file"}}
 				upd_tmpl := `
 {{define "upd_template"}}
 // Update Template
@@ -3768,7 +3771,7 @@ var rv = JSON.stringify(data);
 
 				// data["updcode"] = `data["xxx111xxx"] = 12` // -dummy placeholder for moment
 				data["updcode"] = words[2]
-				fmt.Printf("updcode = [%s]\n", words[2])
+				// fmt.Printf("updcode = [%s]\n", words[2])
 
 				if !err_flag {
 					// -----------------------------------------------------------------------------------------------------------
@@ -3787,7 +3790,7 @@ var rv = JSON.stringify(data);
 						//  4. -- already done in JS -- SVar(rv) -> string, set in ss
 						if value, err := vm.Get("rv"); err == nil {
 							if value_str, err := value.ToString(); err == nil {
-								fmt.Printf("rv=%v\n", value_str)
+								fmt.Printf("updated value = %v\n", value_str)
 								ss = value_str
 							} else {
 								fmt.Printf("Error in getting results from update - err=%v\n", err)

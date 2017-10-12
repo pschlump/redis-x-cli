@@ -15,6 +15,7 @@ var IsLinux = false
 var IsUnix = false
 
 var defaultSearchPath = "C:\\cfg;."
+var ToPdf = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
 
 //var opts struct {
 //	GlobalCfgFN string `short:"g" long:"globaCfgFile"    description:"Full path to global config" default:"global-cfg.json"`
