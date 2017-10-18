@@ -74,8 +74,8 @@ import (
 	"github.com/pschlump/redis-x-cli/gofpdf"         // passed
 	"github.com/pschlump/redis-x-cli/myreadline"     //
 	"github.com/pschlump/redis-x-cli/terminal"       //
-	sizlib "github.com/pschlump/redis-x-cli/vsizlib" // "../go-lib/sizlib" // "github.com/pschlump/Go-FTL/server/sizlib" // "../go-lib/sizlib"
-	ms "github.com/pschlump/templatestrings"         // "../ms" // "www.2c-why.com/my-strings"  // ms // "../go-lib/ms"     // passed
+	sizlib "github.com/pschlump/redis-x-cli/vsizlib" //
+	ms "github.com/pschlump/templatestrings"         //
 	"github.com/robertkrimen/otto"
 )
 
